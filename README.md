@@ -13,6 +13,5 @@ This repository hosts the code for a semester-long project on building and exper
 1. Clone the repo
 2. `cd baseline/`
 3. Install dependencies: `pip install -r ../requirements.txt`
-4. Run: `python pipeline.py`
 
 ## Teams & Tracks
