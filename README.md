@@ -1,5 +1,4 @@
 # RAG Project – Summer Semester 2025
-University of Bamberg
 
 ## Overview
 This repository hosts the code for a semester-long project on building and experimenting with Retrieval-Augmented Generation (RAG) systems. Students start with a shared baseline and then explore specialized variations in teams.
