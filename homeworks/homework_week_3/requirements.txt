@@ -1,5 +1,3 @@
-openai
-hf_xet
 faiss-cpu               # FAISS vector index
 torch                   # ML framework (required by sentence-transformers)
 sentence-transformers   # Sentence embeddings
