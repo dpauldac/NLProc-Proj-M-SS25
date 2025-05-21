@@ -7,7 +7,9 @@ This repository hosts the code for a semester-long project on building and exper
 - `baseline/`: Common starter system (retriever + generator)
 - `experiments/`: Each team's independent exploration
 - `evaluation/`: Common tools for comparing results
-- `utils/`: Helper functions shared across code
+- `utils/`: Helper functions shared across code.
+- `data/`: Contains the data
+- `homeworks/`: Contains all the homework independently. Files from this are also being incorporated in the baseline structure.
 
 ## Getting Started
 1. Clone the repo
