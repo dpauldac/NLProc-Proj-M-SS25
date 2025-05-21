@@ -1,7 +1,7 @@
 import os
 import shutil
 import pytest
-from retriever import Retriever
+from .retriever import Retriever
 
 TEST_DIR = "test_index"
 TEST_FILE = "test_doc.txt"
