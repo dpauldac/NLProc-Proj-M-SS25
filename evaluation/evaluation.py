@@ -1,6 +1,7 @@
 #implement your evaluation code here
 from pathlib import Path
 import random
+import json
 from transformers import GenerationConfig
 from baseline.retriever import Retriever
 from baseline.generator import Generator
@@ -72,7 +73,7 @@ def rag_test():
         contexts = retriever.query(query, k)
 
         # Generate answer
-        answer = generator.generate_answer(query, contexts)
+        prompt,answer = generator.generate_answer(query, contexts)
 
         # Display results
         print(f"\nTop {k} Context Chunks:")
@@ -83,11 +84,13 @@ def rag_test():
         print("=" * 50 + "\n")
 
 def rag_pipeline_test():
+
     gen_config = GenerationConfig(
-        max_length=256,
-        num_beams=4,
-        temperature=0.7,
-        do_sample=True
+    #    max_length=256,
+   #     temperature=0.3,  # a bit of creativity
+    #    num_beams=2,  # Enables beam search. More beams = more exploration for best output, but slower.
+    #    early_stopping=True,  # Prevents unnecessarily long outputs with beam search.
+    #    do_sample=True  # Randomly selects tokens based on probabilities.
     )
 
     # Load test documents
@@ -98,14 +101,57 @@ def rag_pipeline_test():
         documents_base_path / "demo.pdf"
     ]
 
-    rag = Pipeline(
+    rag_pipeline = Pipeline(
         document_paths = doc_paths,
         index_save_path="./sentence_embeddings_index",
-        chunk_size=500,
         generation_config=gen_config
     )
 
-    answer = rag.query("When was the QuantumLink v2.0 launched?")
+    answer = rag_pipeline.query("When was the QuantumLink v2.0 launched?")
     print("Answer:", answer)
+
+    # Test queries with variations
+    test_queries = [
+        "When was the QuantumLink v2.0 launched?",
+        "Disk space required to install visual studio",
+        "How many mb of disk space required to install visual studio",
+        "What are the system requirements for development tools?"  # New test case
+    ]
+
+    # Evaluation loop
+    for query in test_queries:
+        print(f"\n{'=' * 50}\nQuery: {query}\n{'-' * 50}")
+
+        answer = rag_pipeline.query(query)
+
+        # Display results
+        print(f"=> Generated Answer: {answer}\n")
+        print("=" * 50 + "\n")
+
+
+#def test_script():
+#    path = Path("testing/test_inputs.json")
+   # test_cases = with open(path, "r") as f:
+   #     return json.load(f)
+
+"""
+    results = {}
+
+    for idx, test in enumerate(self.test_cases):
+        answer = self.pipeline.query(test["question"])
+        contexts = self.pipeline.retriever.query(test["question"])
+
+        results[f"test_{idx}"] = {
+            "question": test["question"],
+            "answer_received": answer,
+            "answer_valid": bool(answer.strip()),
+            "grounding_check": self._check_grounding(answer, contexts),
+            "expected_terms_present": all(
+                term in " ".join(contexts).lower()
+                for term in test.get("expected_context_terms", [])
+            )
+        }
+"""
+
 if __name__ == "__main__":
     rag_pipeline_test()

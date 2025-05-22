@@ -6,3 +6,4 @@ sentence-transformers   # Sentence embeddings
 pymupdf                 # For PDF handling (fitz)
 numpy                   # Numerical backend for FAISS
 pytest                  # package for unit test
+nltk                    # package to NLP related dataset and function.

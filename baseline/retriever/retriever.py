@@ -6,6 +6,8 @@ import faiss
 import fitz  # For PDF handling (pip install pymupdf)
 from sentence_transformers import SentenceTransformer
 import pickle
+from utils.utils import chunk_text_recursive_character, chunk_text_fixed_size
+
 
 class Retriever:
     """
@@ -59,11 +61,12 @@ class Retriever:
             List[str]: List of text chunks with maximum length chunk_size
         """
         chunks = []
-        start = 0
-        while start < len(text):
-            end = min(len(text), start + self.chunk_size)
-            chunks.append(text[start:end])
-            start += self.chunk_size
+       # start = 0
+      #  while start < len(text):
+      #      end = min(len(text), start + self.chunk_size)
+      #      chunks.append(text[start:end])
+      #      start += self.chunk_size
+        chunks = chunk_text_fixed_size(text, chunk_size = self.chunk_size)
         return chunks
 
     def _read_file(self, file_path: Union[str, Path]) -> str:
