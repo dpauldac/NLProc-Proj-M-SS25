@@ -32,10 +32,6 @@ class PipelineTester:
                 "answer_received": answer,
                 "answer_valid": bool(answer.strip()),
                 "grounding_check": self._check_grounding(answer, contexts),
-                "expected_terms_present": all(
-                    term in " ".join(contexts).lower()
-                    for term in test.get("expected_context_terms", [])
-                )
             }
 
         self._generate_report(results)

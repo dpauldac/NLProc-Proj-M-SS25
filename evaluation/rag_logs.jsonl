@@ -1041,26 +1041,627 @@
   "timestamp": "2025-05-22T07:25:03.561564",
   "group_id": "Team Oneironauts"
 }
-{"question": "When was the QuantumLink v2.0 launched?", "retrieved_chunks": ["th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ", "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI", "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n\nSummarize the key points from the context about 'When was the QuantumLink v2.0 launched?'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "1. Use the context to help readers understand the context. 2. If unsure, say 'I", "timestamp": "2025-05-22T07:27:26.132876", "group_id": "Team Oneironauts"}
-{"question": "When was the QuantumLink v2.0 launched?", "retrieved_chunks": ["th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ", "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI", "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n\nSummarize the key points from the context about 'When was the QuantumLink v2.0 launched?'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "1. Use the context to help readers understand the context. 2. If unsure, say 'I", "timestamp": "2025-05-22T07:27:27.674319", "group_id": "Team Oneironauts"}
-{"question": "Disk space required to install visual studio", "retrieved_chunks": ["# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S", "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe", "or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n\nSummarize the key points from the context about 'Disk space required to install visual studio'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "-         ", "timestamp": "2025-05-22T07:27:28.878521", "group_id": "Team Oneironauts"}
-{"question": "How many mb of disk space required to install visual studio", "retrieved_chunks": ["or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter", "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S", "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n\nSummarize the key points from the context about 'How many mb of disk space required to install visual studio'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "- or * 1 GB of RAM * 250 MB of disk space (plus", "timestamp": "2025-05-22T07:27:30.200138", "group_id": "Team Oneironauts"}
-{"question": "What are the system requirements for development tools?", "retrieved_chunks": [" 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple", "er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or", "ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n-  11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple\n- er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or\n- ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R\n\nSummarize the key points from the context about 'What are the system requirements for development tools?'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "## Prerequisites * **Operating System:** * Windows 10 or - mini", "timestamp": "2025-05-22T07:27:31.436358", "group_id": "Team Oneironauts"}
-{"question": "When was the QuantumLink v2.0 launched?", "retrieved_chunks": ["th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ", "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI", "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n\nSummarize the key points from the context about 'When was the QuantumLink v2.0 launched?'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "1. Use the context to help readers understand the context. 2. If unsure, say 'I", "timestamp": "2025-05-22T07:41:44.743577", "group_id": "Team Oneironauts"}
-{"question": "Disk space required to install visual studio", "retrieved_chunks": ["# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S", "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe", "or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n\nSummarize the key points from the context about 'Disk space required to install visual studio'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "-         ", "timestamp": "2025-05-22T07:41:46.218880", "group_id": "Team Oneironauts"}
-{"question": "How many mb of space required to install visual studio", "retrieved_chunks": ["or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter", "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S", "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n\nSummarize the key points from the context about 'How many mb of space required to install visual studio'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "- or * 1 GB of RAM * 250 MB of disk space (plus", "timestamp": "2025-05-22T07:41:47.470420", "group_id": "Team Oneironauts"}
-{"question": "What are the system requirements for development tools?", "retrieved_chunks": [" 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple", "er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or", "ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n-  11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple\n- er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or\n- ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R\n\nSummarize the key points from the context about 'What are the system requirements for development tools?'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "## Prerequisites * **Operating System:** * Windows 10 or - mini", "timestamp": "2025-05-22T07:41:48.653888", "group_id": "Team Oneironauts"}
-{"question": "How many new customer got acquired in Q1 2025?", "retrieved_chunks": ["rketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2", "rketing Performance \n\u25cf\u200b\nCustomer Acquisition: Acquired 4,800 new customers, a 37% increase from Q1 2", "enue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- rketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2\n- rketing Performance \n\u25cf\u200b\nCustomer Acquisition: Acquired 4,800 new customers, a 37% increase from Q1 2\n- enue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year\n\nSummarize the key points from the context about 'How many new customer got acquired in Q1 2025?'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "1. Use the key points from the context 2. If unsure, say 'I don't", "timestamp": "2025-05-22T07:41:49.831699", "group_id": "Team Oneironauts"}
-{"question": "Explain quantum computing", "retrieved_chunks": ["ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI", "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi", "th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for "], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n\nSummarize the key points from the context about 'Explain quantum computing'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "1. Use the context to explain the key points. 2. If unsure, say 'I don", "timestamp": "2025-05-22T07:41:50.985336", "group_id": "Team Oneironauts"}
-{"question": "When was the QuantumLink v2.0 launched?", "retrieved_chunks": ["th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ", "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI", "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n\nSummarize the key points from the context about 'When was the QuantumLink v2.0 launched?'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "1. Use the context to help readers understand the context. 2. If unsure, say 'I", "timestamp": "2025-05-22T07:48:04.127604", "group_id": "Team Oneironauts"}
-{"question": "Disk space required to install visual studio", "retrieved_chunks": ["# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S", "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe", "or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n\nSummarize the key points from the context about 'Disk space required to install visual studio'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "-         ", "timestamp": "2025-05-22T07:48:05.777968", "group_id": "Team Oneironauts"}
-{"question": "How many mb of space required to install visual studio", "retrieved_chunks": ["or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter", "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S", "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n\nSummarize the key points from the context about 'How many mb of space required to install visual studio'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "- or * 1 GB of RAM * 250 MB of disk space (plus", "timestamp": "2025-05-22T07:48:07.026504", "group_id": "Team Oneironauts"}
-{"question": "What are the system requirements for development tools?", "retrieved_chunks": [" 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple", "er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or", "ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n-  11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple\n- er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or\n- ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R\n\nSummarize the key points from the context about 'What are the system requirements for development tools?'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "## Prerequisites * **Operating System:** * Windows 10 or - mini", "timestamp": "2025-05-22T07:48:08.270890", "group_id": "Team Oneironauts"}
-{"question": "How many new customer got acquired in Q1 2025?", "retrieved_chunks": ["rketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2", "rketing Performance \n\u25cf\u200b\nCustomer Acquisition: Acquired 4,800 new customers, a 37% increase from Q1 2", "enue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- rketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2\n- rketing Performance \n\u25cf\u200b\nCustomer Acquisition: Acquired 4,800 new customers, a 37% increase from Q1 2\n- enue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year\n\nSummarize the key points from the context about 'How many new customer got acquired in Q1 2025?'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "1. Use the key points from the context 2. If unsure, say 'I don't", "timestamp": "2025-05-22T07:48:09.494828", "group_id": "Team Oneironauts"}
-{"question": "Explain quantum computing", "retrieved_chunks": ["ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI", "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi", "th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for "], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n\nSummarize the key points from the context about 'Explain quantum computing'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "1. Use the context to explain the key points. 2. If unsure, say 'I don", "timestamp": "2025-05-22T07:48:10.642974", "group_id": "Team Oneironauts"}
-{"question": "When was the QuantumLink v2.0 launched?", "retrieved_chunks": ["th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ", "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI", "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n\nSummarize the key points from the context about 'When was the QuantumLink v2.0 launched?'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "1. Use the context to help readers understand the context. 2. If unsure, say 'I", "timestamp": "2025-05-22T07:49:51.518727", "group_id": "Team Oneironauts"}
-{"question": "Disk space required to install visual studio", "retrieved_chunks": ["# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S", "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe", "or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n\nSummarize the key points from the context about 'Disk space required to install visual studio'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "-         ", "timestamp": "2025-05-22T07:49:53.434353", "group_id": "Team Oneironauts"}
-{"question": "How many mb of space required to install visual studio", "retrieved_chunks": ["or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter", "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S", "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n\nSummarize the key points from the context about 'How many mb of space required to install visual studio'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "- or * 1 GB of RAM * 250 MB of disk space (plus", "timestamp": "2025-05-22T07:49:54.717543", "group_id": "Team Oneironauts"}
-{"question": "What are the system requirements for development tools?", "retrieved_chunks": [" 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple", "er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or", "ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n-  11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple\n- er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or\n- ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R\n\nSummarize the key points from the context about 'What are the system requirements for development tools?'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "## Prerequisites * **Operating System:** * Windows 10 or - mini", "timestamp": "2025-05-22T07:49:56.621976", "group_id": "Team Oneironauts"}
-{"question": "How many new customer got acquired in Q1 2025?", "retrieved_chunks": ["rketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2", "rketing Performance \n\u25cf\u200b\nCustomer Acquisition: Acquired 4,800 new customers, a 37% increase from Q1 2", "enue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year"], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- rketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2\n- rketing Performance \n\u25cf\u200b\nCustomer Acquisition: Acquired 4,800 new customers, a 37% increase from Q1 2\n- enue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year\n\nSummarize the key points from the context about 'How many new customer got acquired in Q1 2025?'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "1. Use the key points from the context 2. If unsure, say 'I don't", "timestamp": "2025-05-22T07:49:58.308481", "group_id": "Team Oneironauts"}
-{"question": "Explain quantum computing", "retrieved_chunks": ["ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI", "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi", "th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for "], "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n\nSummarize the key points from the context about 'Explain quantum computing'.\nKeep summary under 150 words.\nSummary:", "generated_answer": "1. Use the context to explain the key points. 2. If unsure, say 'I don", "timestamp": "2025-05-22T07:49:59.731547", "group_id": "Team Oneironauts"}
+{
+  "question": "When was the QuantumLink v2.0 launched?",
+  "retrieved_chunks": [
+    "th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ",
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n\nSummarize the key points from the context about 'When was the QuantumLink v2.0 launched?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "1. Use the context to help readers understand the context. 2. If unsure, say 'I",
+  "timestamp": "2025-05-22T07:27:26.132876",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "When was the QuantumLink v2.0 launched?",
+  "retrieved_chunks": [
+    "th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ",
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n\nSummarize the key points from the context about 'When was the QuantumLink v2.0 launched?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "1. Use the context to help readers understand the context. 2. If unsure, say 'I",
+  "timestamp": "2025-05-22T07:27:27.674319",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Disk space required to install visual studio",
+  "retrieved_chunks": [
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S",
+    "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe",
+    "or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n\nSummarize the key points from the context about 'Disk space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "-         ",
+  "timestamp": "2025-05-22T07:27:28.878521",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many mb of disk space required to install visual studio",
+  "retrieved_chunks": [
+    "or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter",
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S",
+    "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n\nSummarize the key points from the context about 'How many mb of disk space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "- or * 1 GB of RAM * 250 MB of disk space (plus",
+  "timestamp": "2025-05-22T07:27:30.200138",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "What are the system requirements for development tools?",
+  "retrieved_chunks": [
+    " 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple",
+    "er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or",
+    "ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n-  11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple\n- er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or\n- ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R\n\nSummarize the key points from the context about 'What are the system requirements for development tools?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "## Prerequisites * **Operating System:** * Windows 10 or - mini",
+  "timestamp": "2025-05-22T07:27:31.436358",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "When was the QuantumLink v2.0 launched?",
+  "retrieved_chunks": [
+    "th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ",
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n\nSummarize the key points from the context about 'When was the QuantumLink v2.0 launched?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "1. Use the context to help readers understand the context. 2. If unsure, say 'I",
+  "timestamp": "2025-05-22T07:41:44.743577",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Disk space required to install visual studio",
+  "retrieved_chunks": [
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S",
+    "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe",
+    "or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n\nSummarize the key points from the context about 'Disk space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "-         ",
+  "timestamp": "2025-05-22T07:41:46.218880",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many mb of space required to install visual studio",
+  "retrieved_chunks": [
+    "or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter",
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S",
+    "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n\nSummarize the key points from the context about 'How many mb of space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "- or * 1 GB of RAM * 250 MB of disk space (plus",
+  "timestamp": "2025-05-22T07:41:47.470420",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "What are the system requirements for development tools?",
+  "retrieved_chunks": [
+    " 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple",
+    "er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or",
+    "ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n-  11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple\n- er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or\n- ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R\n\nSummarize the key points from the context about 'What are the system requirements for development tools?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "## Prerequisites * **Operating System:** * Windows 10 or - mini",
+  "timestamp": "2025-05-22T07:41:48.653888",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many new customer got acquired in Q1 2025?",
+  "retrieved_chunks": [
+    "rketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2",
+    "rketing Performance \n\u25cf\u200b\nCustomer Acquisition: Acquired 4,800 new customers, a 37% increase from Q1 2",
+    "enue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- rketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2\n- rketing Performance \n\u25cf\u200b\nCustomer Acquisition: Acquired 4,800 new customers, a 37% increase from Q1 2\n- enue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year\n\nSummarize the key points from the context about 'How many new customer got acquired in Q1 2025?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "1. Use the key points from the context 2. If unsure, say 'I don't",
+  "timestamp": "2025-05-22T07:41:49.831699",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Explain quantum computing",
+  "retrieved_chunks": [
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi",
+    "th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for "
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n\nSummarize the key points from the context about 'Explain quantum computing'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "1. Use the context to explain the key points. 2. If unsure, say 'I don",
+  "timestamp": "2025-05-22T07:41:50.985336",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "When was the QuantumLink v2.0 launched?",
+  "retrieved_chunks": [
+    "th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ",
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n\nSummarize the key points from the context about 'When was the QuantumLink v2.0 launched?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "1. Use the context to help readers understand the context. 2. If unsure, say 'I",
+  "timestamp": "2025-05-22T07:48:04.127604",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Disk space required to install visual studio",
+  "retrieved_chunks": [
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S",
+    "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe",
+    "or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n\nSummarize the key points from the context about 'Disk space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "-         ",
+  "timestamp": "2025-05-22T07:48:05.777968",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many mb of space required to install visual studio",
+  "retrieved_chunks": [
+    "or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter",
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S",
+    "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n\nSummarize the key points from the context about 'How many mb of space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "- or * 1 GB of RAM * 250 MB of disk space (plus",
+  "timestamp": "2025-05-22T07:48:07.026504",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "What are the system requirements for development tools?",
+  "retrieved_chunks": [
+    " 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple",
+    "er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or",
+    "ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n-  11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple\n- er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or\n- ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R\n\nSummarize the key points from the context about 'What are the system requirements for development tools?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "## Prerequisites * **Operating System:** * Windows 10 or - mini",
+  "timestamp": "2025-05-22T07:48:08.270890",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many new customer got acquired in Q1 2025?",
+  "retrieved_chunks": [
+    "rketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2",
+    "rketing Performance \n\u25cf\u200b\nCustomer Acquisition: Acquired 4,800 new customers, a 37% increase from Q1 2",
+    "enue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- rketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2\n- rketing Performance \n\u25cf\u200b\nCustomer Acquisition: Acquired 4,800 new customers, a 37% increase from Q1 2\n- enue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year\n\nSummarize the key points from the context about 'How many new customer got acquired in Q1 2025?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "1. Use the key points from the context 2. If unsure, say 'I don't",
+  "timestamp": "2025-05-22T07:48:09.494828",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Explain quantum computing",
+  "retrieved_chunks": [
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi",
+    "th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for "
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n\nSummarize the key points from the context about 'Explain quantum computing'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "1. Use the context to explain the key points. 2. If unsure, say 'I don",
+  "timestamp": "2025-05-22T07:48:10.642974",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "When was the QuantumLink v2.0 launched?",
+  "retrieved_chunks": [
+    "th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ",
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n\nSummarize the key points from the context about 'When was the QuantumLink v2.0 launched?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "1. Use the context to help readers understand the context. 2. If unsure, say 'I",
+  "timestamp": "2025-05-22T07:49:51.518727",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Disk space required to install visual studio",
+  "retrieved_chunks": [
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S",
+    "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe",
+    "or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n\nSummarize the key points from the context about 'Disk space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "-         ",
+  "timestamp": "2025-05-22T07:49:53.434353",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many mb of space required to install visual studio",
+  "retrieved_chunks": [
+    "or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter",
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S",
+    "un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- or\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual S\n- un the Installer:**\n    * Once the download is complete, locate the `.exe` file (e.g., `VSCodeUserSe\n\nSummarize the key points from the context about 'How many mb of space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "- or * 1 GB of RAM * 250 MB of disk space (plus",
+  "timestamp": "2025-05-22T07:49:54.717543",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "What are the system requirements for development tools?",
+  "retrieved_chunks": [
+    " 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple",
+    "er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or",
+    "ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n-  11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple\n- er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or\n- ministrator privileges). Typically, the `64-bit` version is appropriate for modern systems.\n\n2.  **R\n\nSummarize the key points from the context about 'What are the system requirements for development tools?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "## Prerequisites * **Operating System:** * Windows 10 or - mini",
+  "timestamp": "2025-05-22T07:49:56.621976",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many new customer got acquired in Q1 2025?",
+  "retrieved_chunks": [
+    "rketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2",
+    "rketing Performance \n\u25cf\u200b\nCustomer Acquisition: Acquired 4,800 new customers, a 37% increase from Q1 2",
+    "enue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year"
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- rketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2\n- rketing Performance \n\u25cf\u200b\nCustomer Acquisition: Acquired 4,800 new customers, a 37% increase from Q1 2\n- enue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year\n\nSummarize the key points from the context about 'How many new customer got acquired in Q1 2025?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "1. Use the key points from the context 2. If unsure, say 'I don't",
+  "timestamp": "2025-05-22T07:49:58.308481",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Explain quantum computing",
+  "retrieved_chunks": [
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi",
+    "th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for "
+  ],
+  "prompt": "Follow these rules:\n1. Try to use information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, wi\n- th over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n\nSummarize the key points from the context about 'Explain quantum computing'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "1. Use the context to explain the key points. 2. If unsure, say 'I don",
+  "timestamp": "2025-05-22T07:49:59.731547",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "When was the QuantumLink v2.0 launched?",
+  "retrieved_chunks": [
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ",
+    "lutions during the second quarter of 2025 (April 1 - June 30). Q2 \ndemonstrated accelerated growth across key segments, validating the strategic investments \nmade in product development and market exp"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- lutions during the second quarter of 2025 (April 1 - June 30). Q2 \ndemonstrated accelerated growth across key segments, validating the strategic investments \nmade in product development and market exp\n\nSummarize the key points from the context about 'When was the QuantumLink v2.0 launched?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "         ",
+  "timestamp": "2025-05-22T11:51:54.186499",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Disk space required to install visual studio",
+  "retrieved_chunks": [
+    "d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad",
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i",
+    "Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i\n- Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down\n\nSummarize the key points from the context about 'Disk space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "Download the Visual Studio Code (VS Code) installer.",
+  "timestamp": "2025-05-22T11:51:55.041099",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many mb of space required to install visual studio",
+  "retrieved_chunks": [
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i",
+    "Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down",
+    "net Connection:** Required for downloading the installer and for some features/extensions.\n\n## Installation Steps\n\n### Windows\n\n1.  **Download the Installer:**\n    * Go to the official VS Code downloa"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i\n- Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down\n- net Connection:** Required for downloading the installer and for some features/extensions.\n\n## Installation Steps\n\n### Windows\n\n1.  **Download the Installer:**\n    * Go to the official VS Code downloa\n\nSummarize the key points from the context about 'How many mb of space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "- # README: Installing Visual Studio Code This guide provides instructions on how to install",
+  "timestamp": "2025-05-22T11:51:56.277087",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "What are the system requirements for development tools?",
+  "retrieved_chunks": [
+    "er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple",
+    "ater\n        * GLIBC version 2.28 or later\n* **Hardware (Minimum):**\n    * 1.6 GHz or faster processor\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter",
+    " Silicon)\n    * Linux:\n        * Debian/Ubuntu based: Ubuntu 20.04, Debian 10 or newer\n        * RHEL/Fedora/SUSE based: RHEL 7, Fedora 34, openSUSE 15.2 or newer\n        * GLIBCXX version 3.4.25 or l"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple\n- ater\n        * GLIBC version 2.28 or later\n* **Hardware (Minimum):**\n    * 1.6 GHz or faster processor\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n-  Silicon)\n    * Linux:\n        * Debian/Ubuntu based: Ubuntu 20.04, Debian 10 or newer\n        * RHEL/Fedora/SUSE based: RHEL 7, Fedora 34, openSUSE 15.2 or newer\n        * GLIBCXX version 3.4.25 or l\n\nSummarize the key points from the context about 'What are the system requirements for development tools?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "## Prerequisites * **Operating System:** * Windows 10 or 11 (64",
+  "timestamp": "2025-05-22T11:51:57.607311",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many new customer got acquired in Q1 2025?",
+  "retrieved_chunks": [
+    "024. \n\u25cf\u200b Market Penetration: Expanded into three new APAC regions, contributing 10% of total \nnew customer acquisition. \n \n\u25cf\u200b Marketing Campaigns: \"Innovate Tomorrow\" digital campaign achieved 15 mill",
+    "ansion in previous periods. \nFinancial Performance \n\u25cf\u200b\nRevenue: Total revenue for Q2 reached $6.5 million, representing a substantial 25% \nincrease from Q1 2025 and a 35% year-over-year growth. This e",
+    "t penetration, despite ongoing \neconomic fluctuations. \nFinancial Performance \n\u25cf\u200b Revenue: Total revenue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- 024. \n\u25cf\u200b Market Penetration: Expanded into three new APAC regions, contributing 10% of total \nnew customer acquisition. \n \n\u25cf\u200b Marketing Campaigns: \"Innovate Tomorrow\" digital campaign achieved 15 mill\n- ansion in previous periods. \nFinancial Performance \n\u25cf\u200b\nRevenue: Total revenue for Q2 reached $6.5 million, representing a substantial 25% \nincrease from Q1 2025 and a 35% year-over-year growth. This e\n- t penetration, despite ongoing \neconomic fluctuations. \nFinancial Performance \n\u25cf\u200b Revenue: Total revenue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year\n\nSummarize the key points from the context about 'How many new customer got acquired in Q1 2025?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "- 024.",
+  "timestamp": "2025-05-22T11:51:58.115064",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Summarize the steps of Installing visual studio.",
+  "retrieved_chunks": [
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i",
+    "Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down",
+    "d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i\n- Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down\n- d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad\n\nSummarize the key points from the context about 'Summarize the steps of Installing visual studio.'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "- # README: Installing Visual Studio Code This guide provides instructions on how to install",
+  "timestamp": "2025-05-22T11:51:59.542100",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Explain quantum computing",
+  "retrieved_chunks": [
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ",
+    "e into R&D, primarily focusing \non next-generation AI models and blockchain integration. \nSales & Marketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- e into R&D, primarily focusing \non next-generation AI models and blockchain integration. \nSales & Marketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2\n\nSummarize the key points from the context about 'Explain quantum computing'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "Explain the main points of the article.",
+  "timestamp": "2025-05-22T11:52:00.284994",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "When was the QuantumLink v2.0 launched?",
+  "retrieved_chunks": [
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ",
+    "lutions during the second quarter of 2025 (April 1 - June 30). Q2 \ndemonstrated accelerated growth across key segments, validating the strategic investments \nmade in product development and market exp"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- lutions during the second quarter of 2025 (April 1 - June 30). Q2 \ndemonstrated accelerated growth across key segments, validating the strategic investments \nmade in product development and market exp\n\nSummarize the key points from the context about 'When was the QuantumLink v2.0 launched?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "         ",
+  "timestamp": "2025-05-22T11:53:43.701645",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Disk space required to install visual studio",
+  "retrieved_chunks": [
+    "d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad",
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i",
+    "Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i\n- Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down\n\nSummarize the key points from the context about 'Disk space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "Download the Visual Studio Code (VS Code) installer.",
+  "timestamp": "2025-05-22T11:53:44.684434",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many mb of space required to install visual studio",
+  "retrieved_chunks": [
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i",
+    "Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down",
+    "net Connection:** Required for downloading the installer and for some features/extensions.\n\n## Installation Steps\n\n### Windows\n\n1.  **Download the Installer:**\n    * Go to the official VS Code downloa"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i\n- Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down\n- net Connection:** Required for downloading the installer and for some features/extensions.\n\n## Installation Steps\n\n### Windows\n\n1.  **Download the Installer:**\n    * Go to the official VS Code downloa\n\nSummarize the key points from the context about 'How many mb of space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "- # README: Installing Visual Studio Code This guide provides instructions on how to install",
+  "timestamp": "2025-05-22T11:53:45.958587",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "What are the system requirements for development tools?",
+  "retrieved_chunks": [
+    "er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple",
+    "ater\n        * GLIBC version 2.28 or later\n* **Hardware (Minimum):**\n    * 1.6 GHz or faster processor\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter",
+    " Silicon)\n    * Linux:\n        * Debian/Ubuntu based: Ubuntu 20.04, Debian 10 or newer\n        * RHEL/Fedora/SUSE based: RHEL 7, Fedora 34, openSUSE 15.2 or newer\n        * GLIBCXX version 3.4.25 or l"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple\n- ater\n        * GLIBC version 2.28 or later\n* **Hardware (Minimum):**\n    * 1.6 GHz or faster processor\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n-  Silicon)\n    * Linux:\n        * Debian/Ubuntu based: Ubuntu 20.04, Debian 10 or newer\n        * RHEL/Fedora/SUSE based: RHEL 7, Fedora 34, openSUSE 15.2 or newer\n        * GLIBCXX version 3.4.25 or l\n\nSummarize the key points from the context about 'What are the system requirements for development tools?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "## Prerequisites * **Operating System:** * Windows 10 or 11 (64",
+  "timestamp": "2025-05-22T11:53:47.355456",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many new customer got acquired in Q1 2025?",
+  "retrieved_chunks": [
+    "024. \n\u25cf\u200b Market Penetration: Expanded into three new APAC regions, contributing 10% of total \nnew customer acquisition. \n \n\u25cf\u200b Marketing Campaigns: \"Innovate Tomorrow\" digital campaign achieved 15 mill",
+    "ansion in previous periods. \nFinancial Performance \n\u25cf\u200b\nRevenue: Total revenue for Q2 reached $6.5 million, representing a substantial 25% \nincrease from Q1 2025 and a 35% year-over-year growth. This e",
+    "t penetration, despite ongoing \neconomic fluctuations. \nFinancial Performance \n\u25cf\u200b Revenue: Total revenue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- 024. \n\u25cf\u200b Market Penetration: Expanded into three new APAC regions, contributing 10% of total \nnew customer acquisition. \n \n\u25cf\u200b Marketing Campaigns: \"Innovate Tomorrow\" digital campaign achieved 15 mill\n- ansion in previous periods. \nFinancial Performance \n\u25cf\u200b\nRevenue: Total revenue for Q2 reached $6.5 million, representing a substantial 25% \nincrease from Q1 2025 and a 35% year-over-year growth. This e\n- t penetration, despite ongoing \neconomic fluctuations. \nFinancial Performance \n\u25cf\u200b Revenue: Total revenue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year\n\nSummarize the key points from the context about 'How many new customer got acquired in Q1 2025?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "- 024.",
+  "timestamp": "2025-05-22T11:53:47.825338",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Summarize the steps of Installing visual studio.",
+  "retrieved_chunks": [
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i",
+    "Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down",
+    "d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i\n- Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down\n- d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad\n\nSummarize the key points from the context about 'Summarize the steps of Installing visual studio.'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "- # README: Installing Visual Studio Code This guide provides instructions on how to install",
+  "timestamp": "2025-05-22T11:53:49.061323",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Explain quantum computing",
+  "retrieved_chunks": [
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ",
+    "e into R&D, primarily focusing \non next-generation AI models and blockchain integration. \nSales & Marketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- e into R&D, primarily focusing \non next-generation AI models and blockchain integration. \nSales & Marketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2\n\nSummarize the key points from the context about 'Explain quantum computing'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "Explain the main points of the article.",
+  "timestamp": "2025-05-22T11:53:49.725604",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "When was the QuantumLink v2.0 launched?",
+  "retrieved_chunks": [
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ",
+    "lutions during the second quarter of 2025 (April 1 - June 30). Q2 \ndemonstrated accelerated growth across key segments, validating the strategic investments \nmade in product development and market exp"
+  ],
+  "prompt": "Context: - ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- lutions during the second quarter of 2025 (April 1 - June 30). Q2 \ndemonstrated accelerated growth across key segments, validating the strategic investments \nmade in product development and market exp\n\nQuestion:When was the QuantumLink v2.0 launched?",
+  "generated_answer": "March 15",
+  "timestamp": "2025-05-22T11:57:06.788197",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Disk space required to install visual studio",
+  "retrieved_chunks": [
+    "d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad",
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i",
+    "Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down"
+  ],
+  "prompt": "Context: - d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i\n- Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down\n\nQuestion:Disk space required to install visual studio",
+  "generated_answer": "/usr/bin/env python3",
+  "timestamp": "2025-05-22T11:57:08.981197",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many mb of space required to install visual studio",
+  "retrieved_chunks": [
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i",
+    "Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down",
+    "net Connection:** Required for downloading the installer and for some features/extensions.\n\n## Installation Steps\n\n### Windows\n\n1.  **Download the Installer:**\n    * Go to the official VS Code downloa"
+  ],
+  "prompt": "Context: - # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i\n- Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down\n- net Connection:** Required for downloading the installer and for some features/extensions.\n\n## Installation Steps\n\n### Windows\n\n1.  **Download the Installer:**\n    * Go to the official VS Code downloa\n\nQuestion:How many mb of space required to install visual studio",
+  "generated_answer": ".",
+  "timestamp": "2025-05-22T11:57:09.470660",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "What are the system requirements for development tools?",
+  "retrieved_chunks": [
+    "er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple",
+    "ater\n        * GLIBC version 2.28 or later\n* **Hardware (Minimum):**\n    * 1.6 GHz or faster processor\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter",
+    " Silicon)\n    * Linux:\n        * Debian/Ubuntu based: Ubuntu 20.04, Debian 10 or newer\n        * RHEL/Fedora/SUSE based: RHEL 7, Fedora 34, openSUSE 15.2 or newer\n        * GLIBCXX version 3.4.25 or l"
+  ],
+  "prompt": "Context: - er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple\n- ater\n        * GLIBC version 2.28 or later\n* **Hardware (Minimum):**\n    * 1.6 GHz or faster processor\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n-  Silicon)\n    * Linux:\n        * Debian/Ubuntu based: Ubuntu 20.04, Debian 10 or newer\n        * RHEL/Fedora/SUSE based: RHEL 7, Fedora 34, openSUSE 15.2 or newer\n        * GLIBCXX version 3.4.25 or l\n\nQuestion:What are the system requirements for development tools?",
+  "generated_answer": "Windows 10 or 11 (64-bit recommended) * macOS 10.15 (Catalina)",
+  "timestamp": "2025-05-22T11:57:10.767099",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many new customer got acquired in Q1 2025?",
+  "retrieved_chunks": [
+    "024. \n\u25cf\u200b Market Penetration: Expanded into three new APAC regions, contributing 10% of total \nnew customer acquisition. \n \n\u25cf\u200b Marketing Campaigns: \"Innovate Tomorrow\" digital campaign achieved 15 mill",
+    "ansion in previous periods. \nFinancial Performance \n\u25cf\u200b\nRevenue: Total revenue for Q2 reached $6.5 million, representing a substantial 25% \nincrease from Q1 2025 and a 35% year-over-year growth. This e",
+    "t penetration, despite ongoing \neconomic fluctuations. \nFinancial Performance \n\u25cf\u200b Revenue: Total revenue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year"
+  ],
+  "prompt": "Context: - 024. \n\u25cf\u200b Market Penetration: Expanded into three new APAC regions, contributing 10% of total \nnew customer acquisition. \n \n\u25cf\u200b Marketing Campaigns: \"Innovate Tomorrow\" digital campaign achieved 15 mill\n- ansion in previous periods. \nFinancial Performance \n\u25cf\u200b\nRevenue: Total revenue for Q2 reached $6.5 million, representing a substantial 25% \nincrease from Q1 2025 and a 35% year-over-year growth. This e\n- t penetration, despite ongoing \neconomic fluctuations. \nFinancial Performance \n\u25cf\u200b Revenue: Total revenue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year\n\nQuestion:How many new customer got acquired in Q1 2025?",
+  "generated_answer": "-024",
+  "timestamp": "2025-05-22T11:57:11.227348",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Summarize the steps of Installing visual studio.",
+  "retrieved_chunks": [
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i",
+    "Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down",
+    "d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad"
+  ],
+  "prompt": "Context: - # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i\n- Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down\n- d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad\n\nQuestion:Summarize the steps of Installing visual studio.",
+  "generated_answer": "- Install** to begin the installation process. - Download the **Windows User Installer**",
+  "timestamp": "2025-05-22T11:57:12.938122",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Explain quantum computing",
+  "retrieved_chunks": [
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ",
+    "e into R&D, primarily focusing \non next-generation AI models and blockchain integration. \nSales & Marketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2"
+  ],
+  "prompt": "Context: - ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- e into R&D, primarily focusing \non next-generation AI models and blockchain integration. \nSales & Marketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2\n\nQuestion:Explain quantum computing",
+  "generated_answer": "QuantumLink v2.0 is a redesigned user interface and a redesigned",
+  "timestamp": "2025-05-22T11:57:14.259436",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "When was the QuantumLink v2.0 launched?",
+  "retrieved_chunks": [
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ",
+    "lutions during the second quarter of 2025 (April 1 - June 30). Q2 \ndemonstrated accelerated growth across key segments, validating the strategic investments \nmade in product development and market exp"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- lutions during the second quarter of 2025 (April 1 - June 30). Q2 \ndemonstrated accelerated growth across key segments, validating the strategic investments \nmade in product development and market exp\n\nSummarize the key points from the context about 'When was the QuantumLink v2.0 launched?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "         ",
+  "timestamp": "2025-05-22T12:12:15.468850",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Disk space required to install visual studio",
+  "retrieved_chunks": [
+    "d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad",
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i",
+    "Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i\n- Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down\n\nSummarize the key points from the context about 'Disk space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "Download the Visual Studio Code (VS Code) installer.",
+  "timestamp": "2025-05-22T12:12:16.858077",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many mb of space required to install visual studio",
+  "retrieved_chunks": [
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i",
+    "Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down",
+    "net Connection:** Required for downloading the installer and for some features/extensions.\n\n## Installation Steps\n\n### Windows\n\n1.  **Download the Installer:**\n    * Go to the official VS Code downloa"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i\n- Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down\n- net Connection:** Required for downloading the installer and for some features/extensions.\n\n## Installation Steps\n\n### Windows\n\n1.  **Download the Installer:**\n    * Go to the official VS Code downloa\n\nSummarize the key points from the context about 'How many mb of space required to install visual studio'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "- # README: Installing Visual Studio Code This guide provides instructions on how to install",
+  "timestamp": "2025-05-22T12:12:18.243357",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "What are the system requirements for development tools?",
+  "retrieved_chunks": [
+    "er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple",
+    "ater\n        * GLIBC version 2.28 or later\n* **Hardware (Minimum):**\n    * 1.6 GHz or faster processor\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter",
+    " Silicon)\n    * Linux:\n        * Debian/Ubuntu based: Ubuntu 20.04, Debian 10 or newer\n        * RHEL/Fedora/SUSE based: RHEL 7, Fedora 34, openSUSE 15.2 or newer\n        * GLIBCXX version 3.4.25 or l"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- er Information](#further-information)\n\n## Prerequisites\n\n* **Operating System:**\n    * Windows 10 or 11 (64-bit recommended)\n    * macOS 10.15 (Catalina) or newer (Universal binary for Intel and Apple\n- ater\n        * GLIBC version 2.28 or later\n* **Hardware (Minimum):**\n    * 1.6 GHz or faster processor\n    * 1 GB of RAM\n    * ~250 MB of disk space (plus space for user data and extensions)\n* **Inter\n-  Silicon)\n    * Linux:\n        * Debian/Ubuntu based: Ubuntu 20.04, Debian 10 or newer\n        * RHEL/Fedora/SUSE based: RHEL 7, Fedora 34, openSUSE 15.2 or newer\n        * GLIBCXX version 3.4.25 or l\n\nSummarize the key points from the context about 'What are the system requirements for development tools?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "## Prerequisites * **Operating System:** * Windows 10 or 11 (64",
+  "timestamp": "2025-05-22T12:12:19.558619",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many new customer got acquired in Q1 2025?",
+  "retrieved_chunks": [
+    "024. \n\u25cf\u200b Market Penetration: Expanded into three new APAC regions, contributing 10% of total \nnew customer acquisition. \n \n\u25cf\u200b Marketing Campaigns: \"Innovate Tomorrow\" digital campaign achieved 15 mill",
+    "ansion in previous periods. \nFinancial Performance \n\u25cf\u200b\nRevenue: Total revenue for Q2 reached $6.5 million, representing a substantial 25% \nincrease from Q1 2025 and a 35% year-over-year growth. This e",
+    "t penetration, despite ongoing \neconomic fluctuations. \nFinancial Performance \n\u25cf\u200b Revenue: Total revenue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- 024. \n\u25cf\u200b Market Penetration: Expanded into three new APAC regions, contributing 10% of total \nnew customer acquisition. \n \n\u25cf\u200b Marketing Campaigns: \"Innovate Tomorrow\" digital campaign achieved 15 mill\n- ansion in previous periods. \nFinancial Performance \n\u25cf\u200b\nRevenue: Total revenue for Q2 reached $6.5 million, representing a substantial 25% \nincrease from Q1 2025 and a 35% year-over-year growth. This e\n- t penetration, despite ongoing \neconomic fluctuations. \nFinancial Performance \n\u25cf\u200b Revenue: Total revenue for Q1 reached $5.2 million, representing a 15% increase from \nQ4 2024 and a 25% year-over-year\n\nSummarize the key points from the context about 'How many new customer got acquired in Q1 2025?'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "- 024.",
+  "timestamp": "2025-05-22T12:12:20.768021",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Summarize the steps of Installing visual studio.",
+  "retrieved_chunks": [
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i",
+    "Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down",
+    "d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i\n- Install** to begin the installation process.\n\n7.  **Finish:**\n    * Once the installation is complete, you can choose to launch Visual Studio Code immediately. Click **Finish**.\n\n### macOS\n\n1.  **Down\n- d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad\n\nSummarize the key points from the context about 'Summarize the steps of Installing visual studio.'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "- # README: Installing Visual Studio Code This guide provides instructions on how to install",
+  "timestamp": "2025-05-22T12:12:21.991542",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "Explain quantum computing",
+  "retrieved_chunks": [
+    "ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n",
+    "bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for ",
+    "e into R&D, primarily focusing \non next-generation AI models and blockchain integration. \nSales & Marketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- ights \n\u25cf\u200b Product A (QuantumLink): Launched QuantumLink v2.0 on March 15, incorporating \nenhanced AI analytics and a redesigned user interface. Initial customer feedback is \noverwhelmingly positive. \n\n- bility. \nProduct & Development Highlights \n\u25cf\u200b\nProduct A (QuantumLink): Saw robust adoption rates, with over 15,000 new active users \nsubscribing to QuantumLink v2.0 features. Minor patch releases for \n- e into R&D, primarily focusing \non next-generation AI models and blockchain integration. \nSales & Marketing Performance \n\u25cf\u200b Customer Acquisition: Acquired 3,500 new customers, a 30% increase from Q4 2\n\nSummarize the key points from the context about 'Explain quantum computing'.\nKeep summary under 150 words.\nSummary:",
+  "generated_answer": "Explain the main points of the article.",
+  "timestamp": "2025-05-22T12:12:22.675941",
+  "group_id": "Team Oneironauts"
+}
+{
+  "question": "How many mb of space required to install visual studio? a) 350 MB b) 300 MB c) 250 MB d) 1 TB?",
+  "retrieved_chunks": [
+    "# README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i",
+    "d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad",
+    "net Connection:** Required for downloading the installer and for some features/extensions.\n\n## Installation Steps\n\n### Windows\n\n1.  **Download the Installer:**\n    * Go to the official VS Code downloa"
+  ],
+  "prompt": "Follow these rules:\n1. Use only the information from the context\n2. If unsure, say 'I don't know'\n3. Be concise\n\nContext:\n- # README: Installing Visual Studio Code\n\nThis guide provides instructions on how to install Visual Studio Code (VS Code), a lightweight but powerful source code editor which runs on your desktop and i\n- d page: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\n    * Download the **Windows User Installer** (recommended for most users) or the System Installer (requires ad\n- net Connection:** Required for downloading the installer and for some features/extensions.\n\n## Installation Steps\n\n### Windows\n\n1.  **Download the Installer:**\n    * Go to the official VS Code downloa\n\nQuestion: How many mb of space required to install visual studio? a) 350 MB b) 300 MB c) 250 MB d) 1 TB?\nChoose the correct option using the context.\nAnswer only the letter (e.g., 'a') or 'I don't know'.\nAnswer:",
+  "generated_answer": "a",
+  "timestamp": "2025-05-22T12:12:23.076283",
+  "group_id": "Team Oneironauts"
+}
