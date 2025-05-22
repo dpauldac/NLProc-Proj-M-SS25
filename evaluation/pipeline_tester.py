@@ -28,6 +28,7 @@ class PipelineTester:
 
             results[f"test_{idx}"] = {
                 "question": test["question"],
+                "expected_test_answer": test["expected_answer"],
                 "answer_received": answer,
                 "answer_valid": bool(answer.strip()),
                 "grounding_check": self._check_grounding(answer, contexts),
@@ -62,5 +63,5 @@ if __name__ == "__main__":
         index_save_path="./sentence_embeddings_index",
     )
   # Your existing initialization
-    tester = PipelineTester(pipeline)
+    tester = PipelineTester(pipeline, "testing/test_inputs.json")
     test_results = tester.run_tests()
