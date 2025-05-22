@@ -143,7 +143,7 @@ class Retriever:
         #use the top k indices returned by FAISS search to fetch the actual chunks from the saved dictionary containing all the chunks
         return [self.id_to_chunk[i] for i in I[0]]
 
-    def save(self, dir_path:  Union[str, Path]):
+    def save(self, dir_path:  Union[str, Path] = "sentence_embeddings_index"):
         """
         Save the FAISS index and chunk metadata to disk.
 
