@@ -50,6 +50,8 @@ nlp_proj_ss_25\Scripts\activate
 pip install -r requirements.txt
 ```
 ## Description
+expected input and output,
+![alt text](./readme_images/expectedoutput1.png)
 With Initial Setup, only basic prompt design.
 ![alt text](./readme_images/logoutput1.png)
 With Advanced prompt design.
