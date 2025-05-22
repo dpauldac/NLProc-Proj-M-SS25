@@ -1,8 +1,10 @@
 #implement your evaluation code here
 from pathlib import Path
 import random
+from transformers import GenerationConfig
 from baseline.retriever import Retriever
 from baseline.generator import Generator
+from baseline.pipeline import Pipeline
 
 def retriever_test():
     #Tests
@@ -36,7 +38,7 @@ def retriever_test():
             print(f"__{count}__\n {match}")
         print("___________________________")
 
-def rag_pipeline_test():
+def rag_test():
     # Initialize components
     retriever = Retriever()
     generator = Generator(model_name="google/flan-t5-base")  # CPU-friendly model
@@ -80,5 +82,30 @@ def rag_pipeline_test():
         print(f"{'-' * 50}\n=> Generated Answer: {answer}\n")
         print("=" * 50 + "\n")
 
+def rag_pipeline_test():
+    gen_config = GenerationConfig(
+        max_length=256,
+        num_beams=4,
+        temperature=0.7,
+        do_sample=True
+    )
+
+    # Load test documents
+    documents_base_path = Path("../baseline/data")
+    doc_paths = [
+        documents_base_path / "demo.txt",
+        documents_base_path / "demo.md",
+        documents_base_path / "demo.pdf"
+    ]
+
+    rag = Pipeline(
+        document_paths = doc_paths,
+        index_save_path="./sentence_embeddings_index",
+        chunk_size=500,
+        generation_config=gen_config
+    )
+
+    answer = rag.query("When was the QuantumLink v2.0 launched?")
+    print("Answer:", answer)
 if __name__ == "__main__":
     rag_pipeline_test()
