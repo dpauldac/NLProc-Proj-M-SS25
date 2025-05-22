@@ -22,7 +22,7 @@ class Pipeline:
             self,
             document_paths: List[Union[str, Path]],
             index_save_path: Union[str, Path] = "sentence_embeddings_index",
-            chunk_size: int = 100,
+            chunk_size: int = 200,
             generator_model: str = "google/flan-t5-base",
             retriever_model: str = "sentence-transformers/all-MiniLM-L6-v2",
             generation_config: Optional[GenerationConfig] = None, log_path: Union[str, Path] = "rag_logs.jsonl") -> None:

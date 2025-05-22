@@ -21,7 +21,15 @@
         "expected_answer": "3,500"
     },
     {
+        "question": "Summarize the steps of Installing visual studio.",
+        "expected_answer": ""
+    },
+    {
         "question": "Explain quantum computing",
         "expected_answer": ""
+    },
+    {
+        "question": "How many mb of space required to install visual studio? a) 350 MB b) 300 MB c) 250 MB d) 1 TB?",
+        "expected_answer": "250 MB"
     }
 ]
