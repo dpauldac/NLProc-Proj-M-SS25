@@ -1,5 +1,6 @@
 # RAG Project – Summer Semester 2025
-A simple and extensible local Retrieval-Augmented Generation (RAG) system using FAISS and SentenceTransformers and T5. It supports `.txt`, `.md`, and `.pdf` files.
+## Overview
+This repository hosts the code for a project on building and experimenting with Retrieval-Augmented Generation (RAG) systems. A simple and extensible local Retrieval-Augmented Generation (RAG) system using FAISS and SentenceTransformers and T5. It supports `.txt`, `.md`, and `.pdf` files.
 
 ## 🚀 Features
 
@@ -8,8 +9,6 @@ A simple and extensible local Retrieval-Augmented Generation (RAG) system using 
 - Save/load FAISS index
 - Supports `.txt`, `.md`, `.pdf`
 
-## Overview
-This repository hosts the code for a project on building and experimenting with Retrieval-Augmented Generation (RAG) systems. Students start with a shared baseline and then explore specialized variations in teams.
 
 ## Structure
 - `baseline/`: Common starter system (retriever + generator)
