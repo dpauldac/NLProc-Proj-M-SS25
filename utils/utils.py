@@ -49,7 +49,8 @@ def _detect_task_type(question: str, contexts: List[str]) -> str:
     question8 = "Just a regular question."
     """
 
-    if re.search(r"\b([a-z]\)|\([a-zA-Z]\)|[a-z]\.|[1-9]\d*\.|[ivx]+\.|[ivx]+\))\s*", question):
+    # Check for multiple choice pattern
+    if re.search(r"\b([a-z]\)|\([a-zA-Z]\)|[a-z]\.|[1-9]\d*\.|[ivx]+\.|[ivx]+\)|[A-Z]\))\s*", question):
         return 'multiple_choice'
 
     # Check for summarization keywords

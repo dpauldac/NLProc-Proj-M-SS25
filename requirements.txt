@@ -8,3 +8,7 @@ numpy                   # Numerical backend for FAISS
 pytest                  # package for unit test
 nltk                    # package to NLP related dataset and function.
 transformers            # package to handle configuration for Generation
+docling
+spacy[transformers]
+en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.6.1/en_core_web_trf-3.6.1-py3-none-any.whl
+

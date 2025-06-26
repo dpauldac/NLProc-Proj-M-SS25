@@ -86,7 +86,7 @@ class Generator:
                 "Options: offensive/non-offensive\nAnswer:"
             ),
         }
-
+        print(task_type)
         return base_prompt + task_specific[task_type]
 
     def generate_answer(self, question:str, contexts: List[str]) -> tuple[Any, str]:
