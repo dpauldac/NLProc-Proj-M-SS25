@@ -1,4 +1,4 @@
-#implement your generator here
+3#implement your generator here
 from typing import Any
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, GenerationConfig, set_seed
 from typing import List, Optional
@@ -29,9 +29,9 @@ class Generator:
         # Default config if none provided
         if generation_config is None:
             generation_config = GenerationConfig(
-        #       max_length=512,
+               max_length=512,
         #        temperature = 0.3,  #a bit of creativity
-       #         num_beams=2,    #Enables beam search. More beams = more exploration for best output, but slower.
+                num_beams=2,    #Enables beam search. More beams = more exploration for best output, but slower.
        #         early_stopping=True, #Prevents unnecessarily long outputs with beam search.
        #         do_sample = True    #Randomly selects tokens based on probabilities.
            )
@@ -73,12 +73,12 @@ class Generator:
             'qa': f"Question: {question}\nAnswer:",
             'summarization': (
                 f"Summarize the key points from the context about '{question}'.\n"
-                "Keep summary under 150 words.\nSummary:"
+                "Keep summary under 150 words.\n"
             ),
             'multiple_choice': (
                 f"Question: {question}\n"
                 "Choose the correct option using the context.\n"
-                "Answer only the letter (e.g., 'a') or 'I don't know'.\nAnswer:"
+                "Answer only the letter (e.g., 'a') or 'I don't know'.\n"
             ),
             'classification': (
                 f"Classify: {question}\n"

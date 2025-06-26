@@ -2,8 +2,26 @@
 from typing import List
 import nltk
 from nltk.tokenize import sent_tokenize
-
 import re
+from typing import List, Union
+from pathlib import Path
+import os
+import pymupdf  # For PDF handling (pip install pymupdf)
+
+def read_file(file_path: Union[str, Path], max_pages: int = None) -> str:
+  path = Path(file_path)
+
+  text = ""
+  if path.suffix == ".pdf":
+    with pymupdf.open(path) as doc:
+      for i, page in enumerate(doc):
+        if max_pages is not None and i >= max_pages:
+          break
+        text += page.get_text()
+  elif path.suffix in (".txt",'.md'):
+      text = path.read_text()
+
+  return text
 
 def is_policy_related(text):
     lower_text = text.lower()
@@ -30,15 +48,16 @@ def _detect_task_type(question: str, contexts: List[str]) -> str:
     question7 = "Also consider: I. Option One II) Option Two"
     question8 = "Just a regular question."
     """
+
     if re.search(r"\b([a-z]\)|\([a-zA-Z]\)|[a-z]\.|[1-9]\d*\.|[ivx]+\.|[ivx]+\))\s*", question):
         return 'multiple_choice'
 
     # Check for summarization keywords
-    if any(word in question.lower() for word in ['summarize', 'summarization', 'overview', 'brief', ""]):
+    if any(word in question.lower() for word in ['summarize', 'summarization', 'overview', 'brief']):
         return 'summarization'
 
     # Check for classification patterns
-    if any(word in question.lower() for word in ['categorize', 'classify', 'offensive']):
+    if any(word in question.lower() for word in ['categorize', 'classify']):
         return 'classification'
 
     # Check if context contains policy/rules
