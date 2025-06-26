@@ -3,15 +3,17 @@ from pathlib import Path
 import random
 import json
 from transformers import GenerationConfig
-
 #from baseline.retriever import Retriever
+
 from specialization.retriever_speci import RetrieverSpeci
+from specialization import PipelineSpeci
+
 #from baseline.generator import Generator
 from baseline.pipeline import Pipeline
 
 def getPaths():
     #Tests
-    documents_base_path = Path("../baseline/data/findoc_mini_samples")
+    documents_base_path = Path("../baseline/data/findoc_mini_samples_2")
 
     all_document_paths = []
     for file_path in documents_base_path.rglob('*'):
@@ -24,7 +26,7 @@ def getPaths():
 def retriever_test():
     #Tests
     retriever = RetrieverSpeci()
-    documents_base_path = Path("../baseline/data/findoc_mini_samples")
+    documents_base_path = Path("../baseline/data/findoc_mini_samples_2")
 
     all_document_paths = []
     for file_path in documents_base_path.rglob('*'):
@@ -69,16 +71,21 @@ def rag_pipeline_test():
     #    do_sample=True  # Randomly selects tokens based on probabilities.
     )
 
-    # Load test documents
-    documents_base_path = Path("../baseline/data")
-    doc_paths = [
-        documents_base_path / "demo.txt",
-        documents_base_path / "demo.md",
-        documents_base_path / "demo.pdf"
-    ]
+    #Tests
+    retriever = RetrieverSpeci()
+    documents_base_path = Path("../baseline/data/findoc_mini_samples")
+
+    all_document_paths = []
+    for file_path in documents_base_path.rglob('*'):
+        # Check if the current item is a file (not a directory)
+        if file_path.is_file():
+            print(file_path)
+            all_document_paths.append(file_path)
+
+    print(all_document_paths)
 
     rag_pipeline = Pipeline(
-        document_paths = doc_paths,
+        document_paths = all_document_paths,
         index_save_path="./sentence_embeddings_index",
         generation_config=gen_config
     )
@@ -87,15 +94,14 @@ def rag_pipeline_test():
     print("Answer:", answer)
 
     # Test queries with variations
-    test_queries = [
-        "When was the QuantumLink v2.0 launched?",
-        "Disk space required to install visual studio",
-        "How many mb of disk space required to install visual studio",
-        "What are the system requirements for development tools?"  # New test case
+    queries = [
+        "Apple iphone Q2 sales?",
+        "How much revenue did apple make from MAC in 2024?"
+        "How much was the Loss From Operations on Global Services for Boeing in 2023?" # 3,329
     ]
 
     # Evaluation loop
-    for query in test_queries:
+    for query in queries:
         print(f"\n{'=' * 50}\nQuery: {query}\n{'-' * 50}")
 
         answer = rag_pipeline.query(query)
@@ -142,5 +148,15 @@ def testSampleCode():
             print(file_path)
             all_document_paths.append(file_path)
  """
+
+def single_query_test():
+    # "What percentage of Apple’s net sales in 2024 came from direct distribution?"
+    user_query = input("Enter the query: ")
+    pipeline = PipelineSpeci(
+        rebuild_index=False,
+    )
+    pipeline.query(user_query)
+    #check the answer in the logs
+
 if __name__ == "__main__":
-    retriever_test()
+    single_query_test()

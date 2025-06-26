@@ -2,14 +2,14 @@
 import spacy
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-from spacy.cli import download
+#from spacy.cli import download
 
-try:
-    nlp = spacy.load("en_core_web_trf")
-except OSError:
-    print("Downloading 'en_core_web_trf'...")
-    download("en_core_web_trf")
-    nlp = spacy.load("en_core_web_trf")
+#try:
+#    nlp = spacy.load("en_core_web_trf")
+#except OSError:
+#    print("Downloading 'en_core_web_trf'...")
+ #   download("en_core_web_trf")
+ #   nlp = spacy.load("en_core_web_trf")
 
 EMB_MODEL = SentenceTransformer('all-MiniLM-L6-v2')
 EXCLUDED_ORGS = [
@@ -35,6 +35,7 @@ def extract_org_ner(text: str, similarity_threshold: float = 0.85):
     Returns:
         List[Tuple[str, str]]: List of unique (entity_text, entity_label) tuples.
     """
+    nlp = spacy.load("en_core_web_trf")
     doc = nlp(text)
     unique_orgs = []
     unique_embeddings = []
