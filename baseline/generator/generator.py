@@ -3,7 +3,7 @@ from typing import Any
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, GenerationConfig, set_seed
 from typing import List, Optional
 #set_seed(42)
-from utils.utils import _detect_task_type
+from utils.utils import detect_task_type
 
 class Generator:
     """A text generation module for question answering tasks with adaptive prompting.
@@ -58,7 +58,7 @@ class Generator:
         """
 
         """Adaptive prompt construction with auto-detected task type"""
-        task_type = _detect_task_type(question, contexts)
+        task_type = detect_task_type(question, contexts)
         context_str = "\n".join([f"- {ctx}" for ctx in contexts])
 
         base_prompt = (

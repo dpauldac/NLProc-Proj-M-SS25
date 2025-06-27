@@ -20,6 +20,8 @@ def read_file(file_path: Union[str, Path], max_pages: int = None) -> str:
         text += page.get_text()
   elif path.suffix in (".txt",'.md'):
       text = path.read_text()
+  else:
+      raise ValueError(f"Unsupported file type: {path.suffix}, only .txt, .pdf and .md are supported.")
 
   return text
 
@@ -34,7 +36,7 @@ def is_policy_related(text):
                     return True
     return False
 
-def _detect_task_type(question: str, contexts: List[str]) -> str:
+def detect_task_type(question: str, contexts: List[str]) -> str:
     """Automatically detect task type from question/content patterns"""
     # Check for multiple choice pattern
     """

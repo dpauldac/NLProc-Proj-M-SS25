@@ -5,9 +5,9 @@ from baseline.pipeline import Pipeline
 
 
 class PipelineTester:
-    def __init__(self, pipeline, test_file: str = "test_inputs.json"):
+    def __init__(self, pipeline, test_file_path: str = "test_inputs.json"):
         self.pipeline = pipeline
-        self.test_cases = self._load_test_cases(test_file)
+        self.test_cases = self._load_test_cases(test_file_path)
 
     def _load_test_cases(self, path: str) -> List[Dict]:
         with open(path, "r") as f:
@@ -38,7 +38,7 @@ class PipelineTester:
         return results
 
     def _generate_report(self, results: Dict):
-        report_path = Path("test_report.json")
+        report_path = Path("test/test_report.json")
         with open(report_path, "w") as f:
             json.dump(results, f, indent=2)
 
@@ -59,5 +59,5 @@ if __name__ == "__main__":
         index_save_path="./sentence_embeddings_index",
     )
   # Your existing initialization
-    tester = PipelineTester(pipeline, "testing/test_inputs.json")
+    tester = PipelineTester(pipeline, "test/test_inputs.json")
     test_results = tester.run_tests()
