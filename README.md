@@ -1,30 +1,19 @@
 # RAG Project – Summer Semester 2025
 ## Overview
-This repository hosts the code for a project on building and experimenting with Retrieval-Augmented Generation (RAG) systems. A simple and extensible local Retrieval-Augmented Generation (RAG) system using FAISS and SentenceTransformers and T5. It supports `.txt`, `.md`, and `.pdf` files.
-
-## 🚀 Features
-
-- Chunking and vector indexing of documents
-- Natural language query over local files
-- Save/load FAISS index
-- Supports `.txt`, `.md`, `.pdf`
-
+This repository hosts the code for a project on building and experimenting Financial documents(e.g: SEC fillings) with Retrieval-Augmented Generation (RAG) systems. A simple and extensible local Retrieval-Augmented Generation (RAG) system using Docling, FAISS and SentenceTransformers and T5.
 
 ## Structure
 - `baseline/`: Common starter system (retriever + generator)
+- `specialization/`: Contains classes and functions dedicated for specialization
 - `experiments/`: Each team's independent exploration
-- `evaluation/`: Common tools for comparing results, contains some test files.
+- `evaluation/`: Common tools for comparing results, contains some test files and reports.
+  - `test/`: contains testcase input files and generated report with evaluation having summary at the end.
 - `utils/`: Helper functions shared across code.
 - `data/`: Contains the data, mostly document files
 - `homeworks/`: Contains all the homework independently. Files from this are also being incorporated in the baseline structure.
+- `special note`: Any file ending with `_speci.py` indicate this file is dedicated for specialization use case.
 
-## Getting Started
-1. Clone the repo
-2. `cd baseline/`
-3. Install dependencies: `pip install -r ../requirements.txt`
----
-
-## 🛠 Installation
+## 🛠 Getting Started: Installation
 **Step 1**: download and access the project in your device.
 ```bash
 git clone repo_link
@@ -49,7 +38,7 @@ nlp_proj_ss_25\Scripts\activate
 pip install -r requirements.txt
 ```
 ## Description
-expected input and output,
+Baseline expected input and output,
 ![alt text](./readme_images/expectedoutput1.png)
 With Initial Setup, only basic prompt design.
 ![alt text](./readme_images/logoutput1.png)

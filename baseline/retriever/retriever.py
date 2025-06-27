@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer
 import pickle
 
 from baseline.retriever.retrieval_results import RetrievalResults
-from utils.utils import chunk_text_recursive_character, chunk_text_fixed_size
+from utils.utils import chunk_text_recursive_character, chunk_text_fixed_size, read_file
 from .retrieval_results import RetrievalResults
 
 class Retriever:
@@ -73,34 +73,6 @@ class Retriever:
         chunks = chunk_text_fixed_size(text, chunk_size = self.chunk_size)
         return chunks
 
-    def _read_file(self, file_path: Union[str, Path]) -> str:
-        """
-        Read and return the text content from a file.
-
-         Supports .pdf, .txt, and .md files.
-
-         Args:
-             file_path (Union[str, Path]): Path to the input document file.
-
-         Returns:
-             str: The full extracted text content as string from the file.
-
-         Raises:
-             ValueError: If the file format is unsupported.
-         """
-        path = Path(file_path)
-
-        if path.suffix == ".pdf":
-            text = ""
-            with fitz.open(path) as doc:
-                for page in doc:
-                    text += page.get_text()
-            return text
-        elif path.suffix in (".txt",'.md'):
-             return path.read_text()
-        else:
-             raise ValueError(f"Unsupported file type: {path.suffix}, only .txt, .pdf and .md are supported.")
-
     def add_documents(self, file_paths: List[Union[str, Path]]):
         """
          Process(Read, chunk and encode) and index documents from the given file paths for retrieval.
@@ -116,7 +88,7 @@ class Retriever:
         all_chunks = []
         sources = []  # Track source path for each chunk
         for path in file_paths:
-            raw_text = self._read_file(path)
+            raw_text = read_file(path)
             doc_chunks = self._chunk_text(raw_text)
             all_chunks.extend(doc_chunks)
             # Assign source path to each chunk from this document

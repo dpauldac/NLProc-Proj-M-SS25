@@ -8,29 +8,86 @@ import numpy as np
 
 
 class PipelineTester:
-    def __init__(self, pipeline, test_file: str = "test_inputs_speci.json"):
+    """
+       A utility class for evaluating the current RAG system pipeline.
+
+       This tester loads test cases from a JSON file and evaluates the pipeline using:
+         - Cosine similarity between generated and reference answers.
+         - Semantic F1 score based on sentence embeddings.
+         - Grounding checks to verify if the answer terms appear in the retrieved context.
+
+       Attributes:
+           pipeline (PipelineSpeci): An instance of the RAG pipeline to evaluate.
+           test_cases (List[Dict]): A list of test case dictionaries with 'question' and 'ground_truth'.
+           sim_model (SentenceTransformer): A model used for embedding-based similarity computations.
+       """
+
+    def __init__(self, pipeline, test_file_path: str = "test_inputs_speci.json"):
+        """
+        Initialize the tester with a pipeline and load test cases from a file.
+
+        Args:
+            pipeline (PipelineSpeci): The RAG pipeline instance to test.
+            test_file (str): Path to the JSON file containing test inputs.
+        """
         self.pipeline = pipeline
-        self.test_cases = self.load_test_cases(test_file)
+        self.test_cases = self.load_test_cases(test_file_path)
         self.sim_model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
     def load_test_cases(self, path: str) -> List[Dict]:
+        """
+        Load test cases from a JSON file.
+
+        Args:
+            path (str): Path to the JSON file.
+
+        Returns:
+            List[Dict]: A list of test case dictionaries.
+        """
         with open(path, "r") as f:
             return json.load(f)
 
     def check_grounding(self, answer: str, contexts: List[str]) -> bool:
-        """Check if answer terms appear in contexts"""
+        """
+        Check whether any terms from the answer appear in the retrieved context.
+
+        Args:
+            answer (str): The generated answer.
+            contexts (List[str]): Retrieved document chunks.
+
+        Returns:
+            bool: True if any term in the answer is found in the context.
+        """
         context_text = " ".join(contexts).lower()
         answer_terms = answer.lower().split()
         return any(term in context_text for term in answer_terms)
 
     def cosine_similarity(self, a: str, b: str) -> float:
-        """Compute cosine similarity between two texts"""
+        """
+        Compute cosine similarity between two text strings using sentence embeddings.
+
+        Args:
+            a (str): First text string.
+            b (str): Second text string.
+
+        Returns:
+            float: Cosine similarity score between the two texts.
+        """
         emb_a = self.sim_model.encode(a, convert_to_tensor=True)
         emb_b = self.sim_model.encode(b, convert_to_tensor=True)
         return float(util.cos_sim(emb_a, emb_b)[0][0])
 
     def semantic_f1(self, pred: str, true: str) -> float:
-        """Approximate F1 using embedding-based similarity of tokens"""
+        """
+           Compute an approximate F1 score based on embedding similarity of tokens.
+
+           Args:
+               pred (str): Predicted/generated answer.
+               true (str): Ground truth/reference answer.
+
+           Returns:
+               float: A semantic F1 score between 0 and 1.
+        """
         pred_tokens = pred.split()
         true_tokens = true.split()
 
@@ -52,6 +109,12 @@ class PipelineTester:
         return 2 * precision * recall / (precision + recall)
 
     def run_tests(self) -> Dict[str, Dict]:
+        """
+        Run all loaded test cases on the pipeline and compute evaluation metrics.
+
+        Returns:
+             Dict[str, Dict]: A dictionary containing results per test case and an overall summary.
+        """
         results = {}
         f1_scores = []
 
@@ -90,29 +153,13 @@ class PipelineTester:
         return results
 
     def _generate_report(self, results: Dict):
-        report_path = Path("testing/test_report_speci.json")
+        """
+        Save evaluation results to a JSON file.
+
+        Args:
+            results (Dict): The evaluation results to save.
+        """
+        report_path = Path("test/test_report_speci.json")
         with open(report_path, "w") as f:
             json.dump(results, f, indent=2)
         print(f"Test report saved to {report_path.absolute()}")
-
-# Usage
-if __name__ == "__main__":
-    from argparse import ArgumentParser
-
-    documents_base_path = Path("../baseline/data/findoc_mini_samples_2")
-
-    all_document_paths = []
-    for file_path in documents_base_path.rglob('*'):
-        # Check if the current item is a file (not a directory)
-        if file_path.is_file():
-            print(file_path)
-            all_document_paths.append(file_path)
-
-    pipeline = PipelineSpeci(
-        document_paths = all_document_paths,
-        index_save_path="./sentence_embeddings_index_speci",
-        rebuild_index=True,
-    )
-
-    tester = PipelineTester(pipeline, "testing/test_inputs_speci.json")
-    test_results = tester.run_tests()

@@ -3,6 +3,8 @@ from pathlib import Path
 import random
 import json
 from transformers import GenerationConfig
+
+from evaluation.pipeline_tester_speci import PipelineTester
 #from baseline.retriever import Retriever
 
 from specialization.retriever_speci import RetrieverSpeci
@@ -110,53 +112,32 @@ def rag_pipeline_test():
         print(f"=> Generated Answer: {answer}\n")
         print("=" * 50 + "\n")
 
-
-#def test_script():
-#    path = Path("testing/test_inputs.json")
-   # test_cases = with open(path, "r") as f:
-   #     return json.load(f)
-
-"""
-    results = {}
-
-    for idx, test in enumerate(self.test_cases):
-        answer = self.pipeline.query(test["question"])
-        contexts = self.pipeline.retriever.query(test["question"])
-
-        results[f"test_{idx}"] = {
-            "question": test["question"],
-            "answer_received": answer,
-            "answer_valid": bool(answer.strip()),
-            "grounding_check": self._check_grounding(answer, contexts),
-            "expected_terms_present": all(
-                term in " ".join(contexts).lower()
-                for term in test.get("expected_context_terms", [])
-            )
-        }
-"""
-"""
-def testSampleCode():
-    documents_base_path = Path("../baseline/data/findocs")
-
-    all_document_paths = []
-    for file_path in documents_base_path.rglob('*'):
-        # Check if the current item is a file (not a directory)
-        if file_path.is_file():
-            # You might want to add a filter here for specific file extensions
-            # For example, to only include .txt, .md, .pdf:
-            # if file_path.suffix in ['.txt', '.md', '.pdf']:
-            print(file_path)
-            all_document_paths.append(file_path)
- """
-
 def single_query_test():
     # "What percentage of Apple’s net sales in 2024 came from direct distribution?"
     user_query = input("Enter the query: ")
     pipeline = PipelineSpeci(
         rebuild_index=False,
     )
-    pipeline.query(user_query)
+    print(pipeline.query(user_query))
     #check the answer in the logs
+
+def run_pipeline_tester_speci():
+    documents_base_path = Path("../baseline/data/findoc_mini_samples_2")
+
+    all_document_paths = []
+    for file_path in documents_base_path.rglob('*'):
+        # Check if the current item is a file (not a directory)
+        if file_path.is_file():
+            print(file_path)
+            all_document_paths.append(file_path)
+
+    pipeline = PipelineSpeci(
+        document_paths=all_document_paths,
+        index_save_path="./sentence_embeddings_index_speci",
+        rebuild_index=True,
+    )
+    tester = PipelineTester(pipeline, "test/test_inputs_speci.json")
+    test_results = tester.run_tests()
 
 if __name__ == "__main__":
     single_query_test()

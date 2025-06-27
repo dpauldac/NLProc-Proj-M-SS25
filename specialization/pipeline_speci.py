@@ -11,6 +11,17 @@ from typing import Dict, Any
 
 @dataclass
 class LogEntry:
+    """
+    A dataclass to represent a log entry for each query.
+
+    Attributes:
+        question (str): The user input question.
+        retrieved_chunks (List[str]): List of retrieved document chunks.
+        prompt (str): The final prompt sent to the generator model.
+        generated_answer (str): The generated answer from the model.
+        timestamp (str): ISO-formatted timestamp of when the query was processed.
+        group_id (str): Identifier for the team/user.
+    """
     question: str
     retrieved_chunks: List[str]
     prompt: str
@@ -19,6 +30,23 @@ class LogEntry:
     group_id: str
 
 class PipelineSpeci:
+    """
+       A Retrieval-Augmented Generation (RAG) pipeline that combines a semantic retriever and a text generator
+       to answer user queries using document context.
+
+       Args:
+           document_paths (Optional[List[Union[str, Path]]]): Paths to documents for indexing.
+           index_save_path (Union[str, Path]): Path to save/load the FAISS index and metadata.
+           chunk_size (int): Character-based chunking size (optional, used in retriever init).
+           generator_model (str): HuggingFace model name for the generator (e.g., "google/flan-t5-base").
+           retriever_model (str): HuggingFace model name for the sentence encoder.
+           generation_config (Optional[GenerationConfig]): Custom generation parameters (temperature, max_tokens, etc.).
+           log_path (Union[str, Path]): Path to save logs of queries and generated answers.
+           rebuild_index (bool): Whether to re-index documents from scratch or load a saved index.
+
+       Raises:
+           ValueError: If `rebuild_index` is True but no document_paths are provided.
+       """
     def __init__(
             self,
             document_paths: Optional[List[Union[str, Path]]] = None,
@@ -47,12 +75,26 @@ class PipelineSpeci:
             self.retriever.load(index_save_path)
 
     def _log_query(self, entry: Dict[str, Any]):
-        """Append log entry to file"""
+        """
+        Logs a query and its associated context, prompt, and response to a file in JSONL format.
+
+        Args:
+            entry (Dict[str, Any]): A dictionary representing a log entry.
+        """
         with open(self.log_path, "a", encoding="utf-8") as f:
             f.write(json.dumps(entry) + "\n")
 
     def query(self, question: str, k: int = 3) -> str:
-        """End-to-end question answering"""
+        """
+        Runs an end-to-end RAG query: retrieve context, generate answer, and log results.
+
+        Args:
+            question (str): The user's input question.
+            k (int): Number of top retrieved chunks to use as context.
+
+        Returns:
+            str: The generated answer from the language model.
+        """
        # if not self._index_loaded:
         #    raise ValueError("Load documents first using index_documents()")
         contexts = self.retriever.query(question, k)

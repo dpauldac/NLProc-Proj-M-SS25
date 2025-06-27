@@ -32,9 +32,9 @@ class RetrieverSpeci:
 
     Example:
         ::
-        from retriever import Retriever
+        from retriever_speci import RetrieverSpeci
         # Initialize
-        retriever = Retriever(chunk_size=200)
+        retriever = RetrieverSpeci(chunk_size=200)
 
         # Add documents
         retriever.add_documents(["doc1.pdf", "notes.txt"])
@@ -48,7 +48,7 @@ class RetrieverSpeci:
         loaded_retriever.load("my_index")
 
     """
-    def __init__(self, chunk_size: int = 200, model_name: str = "sentence-transformers/all-MiniLM-L6-v2", indexing_type: str = "", max_tokens: int = 320):
+    def __init__(self, chunk_size: int = 200, model_name: str = "sentence-transformers/all-MiniLM-L6-v2", max_tokens: int = 320):
        self.chunk_size = chunk_size
        self.model_name = model_name
        self.max_tokens = max_tokens

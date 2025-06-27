@@ -143,7 +143,7 @@ def rag_pipeline_test():
 
 
 #def test_script():
-#    path = Path("testing/test_inputs.json")
+#    path = Path("test/test_inputs.json")
    # test_cases = with open(path, "r") as f:
    #     return json.load(f)
 
