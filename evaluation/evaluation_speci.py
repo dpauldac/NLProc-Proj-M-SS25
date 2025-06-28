@@ -4,7 +4,7 @@ import random
 import json
 from transformers import GenerationConfig
 
-from evaluation.pipeline_tester_speci import PipelineTester
+from pipeline_tester_speci import PipelineTester
 #from baseline.retriever import Retriever
 
 from specialization.retriever_speci import RetrieverSpeci
@@ -13,10 +13,8 @@ from specialization import PipelineSpeci
 #from baseline.generator import Generator
 from baseline.pipeline import Pipeline
 
-def getPaths():
+def getPaths(documents_base_path):
     #Tests
-    documents_base_path = Path("../baseline/data/findoc_mini_samples_2")
-
     all_document_paths = []
     for file_path in documents_base_path.rglob('*'):
         # Check if the current item is a file (not a directory)
@@ -29,20 +27,19 @@ def retriever_test():
     #Tests
     retriever = RetrieverSpeci()
     documents_base_path = Path("../baseline/data/findoc_mini_samples_2")
-
-    all_document_paths = []
-    for file_path in documents_base_path.rglob('*'):
-        # Check if the current item is a file (not a directory)
-        if file_path.is_file():
-            print(file_path)
-            all_document_paths.append(file_path)
+    index_path = "vector_index_speci"
+    all_document_paths = getPaths(documents_base_path)
 
     print(all_document_paths)
-    retriever.add_documents(all_document_paths)
-    retriever.save("sentence_embeddings_index_speci")
 
-    new_retriever = RetrieverSpeci()
-    new_retriever.load("sentence_embeddings_index_speci")
+    if index_path.exists():
+        print(f"Index exists at {index_path}, loading index...")
+        retriever.load(str(index_path))
+    else:
+        print("Index does not exist. Creating new index...")
+        retriever.add_documents(all_document_paths)
+        retriever.save(str(index_path))
+        retriever.load(str(index_path))
 
     # %%
     # Query variations
@@ -51,12 +48,12 @@ def retriever_test():
         "How much revenue did apple make from MAC in 2024?"
         "How much was the Loss From Operations on Global Services for Boeing in 2023?" # 3,329
     ]
-    # print(new_retriever.query("", k=2))
-   # print(new_retriever.query("", k=2))
+    # print(retriever.query("", k=2))
+   # print(retriever.query("", k=2))
 
     for query in queries:
         k = random.randint(2, 4)
-        matches = new_retriever.query( query, k)
+        matches = retriever.query( query, k)
         print(f"\nQuery: '{query}'\nTop matches:")
         for count, match in enumerate(matches):
             print(f"__{count}__\n {match}")
@@ -76,19 +73,13 @@ def rag_pipeline_test():
     #Tests
     retriever = RetrieverSpeci()
     documents_base_path = Path("../baseline/data/findoc_mini_samples")
-
-    all_document_paths = []
-    for file_path in documents_base_path.rglob('*'):
-        # Check if the current item is a file (not a directory)
-        if file_path.is_file():
-            print(file_path)
-            all_document_paths.append(file_path)
+    all_document_paths = getPaths(documents_base_path)
 
     print(all_document_paths)
 
     rag_pipeline = Pipeline(
         document_paths = all_document_paths,
-        index_save_path="./sentence_embeddings_index",
+        index_save_path="./vector_index_speci",
         generation_config=gen_config
     )
 
@@ -133,7 +124,7 @@ def run_pipeline_tester_speci():
 
     pipeline = PipelineSpeci(
         document_paths=all_document_paths,
-        index_save_path="./sentence_embeddings_index_speci",
+        index_save_path="./vector_index_speci",
         rebuild_index=True,
     )
     tester = PipelineTester(pipeline, "test/test_inputs_speci.json")

@@ -60,7 +60,7 @@ if __name__ == '__main__':
     ])
 
     # persist/save the indexing in the memory for future use
-    retriever.save("sentence_embeddings_index")
+    retriever.save("vector_index")
 
     # run a query
     print(retriever.query("When was the QuantumLink v2.0 launched?"))
@@ -69,7 +69,7 @@ if __name__ == '__main__':
     new_retriever = Retriever()
 
     # load the previously persisted indexing for search
-    new_retriever.load("sentence_embeddings_index")
+    new_retriever.load("vector_index")
 
     # run more queries
     print(new_retriever.query("Disk space required to install visual studio", k=2))

@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
     pipeline = Pipeline(
         document_paths = doc_paths,
-        index_save_path="./sentence_embeddings_index",
+        index_save_path="./vector_index",
     )
   # Your existing initialization
     tester = PipelineTester(pipeline, "test/test_inputs.json")
