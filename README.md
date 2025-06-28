@@ -38,12 +38,9 @@ nlp_proj_ss_25\Scripts\activate
 pip install -r requirements.txt
 ```
 ## Description
-Baseline expected input and output,
-![alt text](./readme_images/expectedoutput1.png)
-With Initial Setup, only basic prompt design.
-![alt text](./readme_images/logoutput1.png)
-With Advanced prompt design.
-![alt text](./readme_images/logoutput2.png)
+Specialization sample questions and output,
+![logs screenshot](./readme_images/logoutput_speci_1.png)
+
 
 ## Teams & Tracks
 **Group**: `@Team Oneironauts`

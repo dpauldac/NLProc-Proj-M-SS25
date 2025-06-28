@@ -3,7 +3,6 @@ from typing import List, Union
 from pathlib import Path
 import os
 import faiss
-import fitz  # For PDF handling (pip install pymupdf)
 from sentence_transformers import SentenceTransformer
 import pickle
 
