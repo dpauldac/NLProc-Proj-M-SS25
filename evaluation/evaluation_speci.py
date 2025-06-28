@@ -109,6 +109,7 @@ def single_query_test():
     pipeline = PipelineSpeci(
         rebuild_index=False,
     )
+    print("Generating answers...:")
     print(pipeline.query(user_query))
     #check the answer in the logs
 
@@ -131,4 +132,5 @@ def run_pipeline_tester_speci():
     test_results = tester.run_tests()
 
 if __name__ == "__main__":
-    single_query_test()
+    single_query_test() # run to test a single query-answer generation
+    #run_pipeline_tester_speci() #uncomment and run to test the pipeline
