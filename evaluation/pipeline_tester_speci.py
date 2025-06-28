@@ -20,6 +20,7 @@ class PipelineTester:
            pipeline (PipelineSpeci): An instance of the RAG pipeline to evaluate.
            test_cases (List[Dict]): A list of test case dictionaries with 'question' and 'ground_truth'.
            sim_model (SentenceTransformer): A model used for embedding-based similarity computations.
+           sim_model (SentenceTransformer): A model used for embedding-based similarity computations.
        """
 
     def __init__(self, pipeline, test_file_path: str = "test_inputs_speci.json"):

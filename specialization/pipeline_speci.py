@@ -98,6 +98,7 @@ class PipelineSpeci:
        # if not self._index_loaded:
         #    raise ValueError("Load documents first using index_documents()")
         contexts = self.retriever.query(question, k)
+        print("=>Retrieved contexts:")
         print(contexts)
         answer, prompt = self.generator.generate_answer(question, contexts)
 
