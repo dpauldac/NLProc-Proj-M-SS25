@@ -11,5 +11,3 @@ transformers            # package to handle configuration for Generation
 docling
 spacy[transformers]
 en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.6.1/en_core_web_trf-3.6.1-py3-none-any.whl
-#testing other generative models
-llama-cpp-python
