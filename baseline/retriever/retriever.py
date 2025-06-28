@@ -141,7 +141,7 @@ class Retriever:
             })
         return RetrievalResults(results)
 
-    def save(self, dir_path:  Union[str, Path] = "sentence_embeddings_index"):
+    def save(self, dir_path:  Union[str, Path] = "vector_index"):
         """
         Save the FAISS index and chunk metadata to disk.
 

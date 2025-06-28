@@ -21,7 +21,7 @@ class Pipeline:
     def __init__(
             self,
             document_paths: List[Union[str, Path]],
-            index_save_path: Union[str, Path] = "sentence_embeddings_index",
+            index_save_path: Union[str, Path] = "vector_index",
             chunk_size: int = 200,
             generator_model: str = "google/flan-t5-base",
             retriever_model: str = "sentence-transformers/all-MiniLM-L6-v2",

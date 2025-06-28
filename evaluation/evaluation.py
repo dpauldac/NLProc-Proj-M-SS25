@@ -17,10 +17,10 @@ def retriever_test():
         documents_base_path / "demo.md",
         documents_base_path / "demo.pdf"
     ])
-    retriever.save("sentence_embeddings_index")
+    retriever.save("vector_index")
 
     new_retriever = Retriever()
-    new_retriever.load("sentence_embeddings_index")
+    new_retriever.load("vector_index")
 
     # %%
     # Query variations
@@ -56,7 +56,7 @@ def rag_test():
 
     # Build index
     retriever.add_documents(test_docs)
-    retriever.save("sentence_embeddings_index")
+    retriever.save("vector_index")
 
 
     # Test queries with variations
@@ -116,7 +116,7 @@ def rag_pipeline_test():
 
     rag_pipeline = Pipeline(
         document_paths = doc_paths,
-        index_save_path="./sentence_embeddings_index",
+        index_save_path="./vector_index",
         generation_config=gen_config
     )
 
