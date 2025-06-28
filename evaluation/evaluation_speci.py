@@ -27,7 +27,7 @@ def retriever_test():
     #Tests
     retriever = RetrieverSpeci()
     documents_base_path = Path("../baseline/data/findoc_mini_samples_2")
-    index_path = "vector_index_speci"
+    index_path = "./vector_index_speci"
     all_document_paths = getPaths(documents_base_path)
 
     print(all_document_paths)
@@ -83,7 +83,7 @@ def rag_pipeline_test():
         generation_config=gen_config
     )
 
-    answer = rag_pipeline.query("When was the QuantumLink v2.0 launched?")
+    answer = rag_pipeline.query("How much was the Loss From Operations on Global Services for Boeing in 2023?")
     print("Answer:", answer)
 
     # Test queries with variations

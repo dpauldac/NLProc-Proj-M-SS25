@@ -50,7 +50,7 @@ class PipelineSpeci:
     def __init__(
             self,
             document_paths: Optional[List[Union[str, Path]]] = None,
-            index_save_path: Union[str, Path] = "vector_index_speci",
+            index_save_path: Union[str, Path] = "./vector_index_speci",
             chunk_size: int = 200,
             generator_model: str = "google/flan-t5-base",
             retriever_model: str = "sentence-transformers/all-MiniLM-L6-v2",

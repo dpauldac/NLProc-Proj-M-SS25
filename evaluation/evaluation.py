@@ -17,10 +17,10 @@ def retriever_test():
         documents_base_path / "demo.md",
         documents_base_path / "demo.pdf"
     ])
-    retriever.save("vector_index")
+    retriever.save("./vector_index")
 
     new_retriever = Retriever()
-    new_retriever.load("vector_index")
+    new_retriever.load("./vector_index")
 
     # %%
     # Query variations
@@ -56,7 +56,7 @@ def rag_test():
 
     # Build index
     retriever.add_documents(test_docs)
-    retriever.save("vector_index")
+    retriever.save("./vector_index")
 
 
     # Test queries with variations
