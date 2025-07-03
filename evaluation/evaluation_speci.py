@@ -110,7 +110,7 @@ def single_query_test():
         rebuild_index=False,
     )
     print("Generating answers...:")
-    print(pipeline.query(user_query))
+    print(pipeline.query(user_query, 8))
     #check the answer in the logs
 
 def run_pipeline_tester_speci():
