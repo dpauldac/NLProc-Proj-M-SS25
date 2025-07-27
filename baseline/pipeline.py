@@ -10,8 +10,21 @@ from typing import Dict, Any
 
 @dataclass
 class LogEntry:
+    """
+    A dataclass to represent a log entry for each query.
+
+    Attributes:
+        question (str): The user input question.
+        retrieved_chunks (List[str]): List of retrieved document chunks.
+        prompt (str): The final prompt sent to the generator model.
+        generated_answer (str): The generated answer from the model.
+        timestamp (str): ISO-formatted timestamp of when the query was processed.
+        group_id (str): Identifier for the team/user.
+    """
     question: str
     retrieved_chunks: List[str]
+    retrieved_chunks_pages: Optional[List[str]]
+    retrieved_chunks_source: Optional[List[str]]
     prompt: str
     generated_answer: str
     timestamp: str
@@ -22,6 +35,7 @@ class Pipeline:
             self,
             document_paths: List[Union[str, Path]],
             index_save_path: Union[str, Path] = "vector_index",
+            rebuild_index: bool = False,
             chunk_size: int = 200,
             generator_model: str = "google/flan-t5-base",
             retriever_model: str = "sentence-transformers/all-MiniLM-L6-v2",
@@ -30,11 +44,18 @@ class Pipeline:
         self.index_save_path = index_save_path
         self.retriever = Retriever(chunk_size=chunk_size, model_name=retriever_model)
         self.generator = Generator(model_name=generator_model, generation_config=generation_config)
-        #self._index_loaded = False
-        self.retriever.add_documents(document_paths)
-        self.retriever.save(index_save_path)
+        self.rebuild_index = rebuild_index
         self.log_path = Path(log_path)
         self.log_path.parent.mkdir(parents=True, exist_ok=True)
+
+        if rebuild_index:
+            if not document_paths:
+                raise ValueError("document_paths must be provided when rebuild_index=True")
+            print("<=****Rebuilding index:****=>")
+            self.retriever.add_documents(document_paths)
+            self.retriever.save(index_save_path)
+        else:
+            self.retriever.load(index_save_path)
 
     def _log_query(self, entry: Dict[str, Any]):
         """Append log entry to file"""
@@ -47,17 +68,19 @@ class Pipeline:
         self.retriever.save(self.index_save_path)
         #self._index_loaded = True
 
-    def query(self, question: str, k: int = 3) -> str:
+    def query(self, question: str, k: int = 5) -> str:
         """End-to-end question answering"""
        # if not self._index_loaded:
         #    raise ValueError("Load documents first using index_documents()")
-        contexts = self.retriever.query(question, k)
-        answer, prompt = self.generator.generate_answer(question, contexts)
+        retrieved_results = self.retriever.query(question, k)
+        answer, prompt = self.generator.generate_answer(question, retrieved_results.chunk_text)
 
         # Create log entry
         log_entry = LogEntry(
             question=question,
-            retrieved_chunks=contexts,
+            retrieved_chunks=retrieved_results.chunk_text,
+            retrieved_chunks_pages=retrieved_results.pages,
+            #retrieved_chunks_source=retrieved_results.source,
             prompt=prompt,
             generated_answer=answer,
             timestamp=datetime.now().isoformat(),

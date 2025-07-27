@@ -1,10 +1,14 @@
 #implement your retriever here
-from typing import List, Union
+from typing import List, Union, Any
 from pathlib import Path
 import os
 import faiss
 import fitz  # For PDF handling (pip install pymupdf)
-from sentence_transformers import SentenceTransformer
+import nltk
+import numpy as np
+from nltk.corpus import stopwords
+from rank_bm25 import BM25Okapi  # Added for BM25
+from sentence_transformers import SentenceTransformer, CrossEncoder
 import pickle
 from utils.utils import chunk_text_recursive_character, chunk_text_fixed_size
 from docling.document_converter import DocumentConverter
@@ -13,6 +17,12 @@ from docling_core.transforms.chunker.tokenizer.huggingface import HuggingFaceTok
 from transformers import AutoTokenizer
 from utils.ner_utils import extract_org_ner
 from utils.utils import read_file
+from baseline.retriever.retrieval_results import RetrievalResults
+from nltk.tokenize import word_tokenize
+
+nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab', quiet=True)
+nltk.download('stopwords', quiet=True)
 
 class RetrieverSpeci:
     """
@@ -48,14 +58,15 @@ class RetrieverSpeci:
         loaded_retriever.load("my_index")
 
     """
-    def __init__(self, chunk_size: int = 200, model_name: str = "sentence-transformers/all-MiniLM-L6-v2", max_tokens: int = 320):
+    def __init__(self, chunk_size: int = 200, model_name: str = "sentence-transformers/all-mpnet-base-v2", max_tokens: int = 320):
        self.chunk_size = chunk_size
        self.model_name = model_name
        self.max_tokens = max_tokens
        self.model = SentenceTransformer(self.model_name)
+       self.cross_encoder = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
        self.tokenizer =  HuggingFaceTokenizer(
            tokenizer=AutoTokenizer.from_pretrained(self.model_name),
-           max_tokens=self.max_tokens ,  # optional, by default derived from `tokenizer` for HF case
+           #max_tokens=self.max_tokens ,  # optional, by default derived from `tokenizer` for HF case
         )
        self.chunker = HybridChunker(
            tokenizer= self.tokenizer,
@@ -68,6 +79,14 @@ class RetrieverSpeci:
 
        # Stores metadata per chunk: {id: {"text": str, "source": str}}
        self.id_to_chunk = {}
+
+       # BM25 components
+       self.bm25_index = None
+       self.bm25_tokenizer = lambda text: [
+           token for token in word_tokenize(text.lower())
+           if token.isalnum() and token not in stopwords.words('english')
+       ]  # Simple tokenizer
+       self.bm25_doc_tokens = []  # Stores tokenized chunks for BM25
 
     def chunk_doc(self, doc_path: Union[str, Path]):
         """
@@ -82,12 +101,25 @@ class RetrieverSpeci:
         doc = result.document
         chunk_iter = self.chunker.chunk(dl_doc=doc)
         cur_doc_chunks = []
+        sources = []
+        pages = []
         for chunk in chunk_iter:
             enriched_text = self.chunker.contextualize(chunk=chunk)
             cur_doc_chunks.append(enriched_text)
+            source = chunk.meta.origin.filename
+            sources.append(source)
+            page_numbers = sorted(
+                set(
+                    prov.page_no
+                    for item in chunk.meta.doc_items
+                    for prov in item.prov
+                    if hasattr(prov, "page_no")
+                )
+            )
+            pages.append(page_numbers)
         #print(cur_doc_chunks)
         print(f"#########Processed and chunked: {doc_path}######")
-        return cur_doc_chunks
+        return cur_doc_chunks, sources, pages
 
     def add_documents(self, file_paths: List[Union[str, Path]]):
         """
@@ -102,8 +134,10 @@ class RetrieverSpeci:
              file_paths (List[Union[str, Path]]): List of document paths to add to the index.
          """
         all_chunks = []
+        all_sources = []
+        all_pages = []
         for path in file_paths:
-            cur_doc_chunks = self.chunk_doc(path)
+            cur_doc_chunks, sources, pages  = self.chunk_doc(path)
             raw_text = read_file(path, max_pages=2)
             ner_data = extract_org_ner(raw_text)
             cur_org_name = ner_data[0][0] if ner_data and ner_data[0] else ""  # first detected org entity
@@ -113,32 +147,86 @@ class RetrieverSpeci:
                 cur_doc_chunks = [f"[ORG: {cur_org_name}] {chunk}" for chunk in cur_doc_chunks]
 
             all_chunks.extend(cur_doc_chunks)
+            all_sources.extend(sources)
+            all_pages.extend(pages)
 
         # Convert chunks to embeddings
         if not all_chunks:
             print("No valid chunks to process")
             return
 
+        #For FAISS
         #Convert each chunk of text into a vector using the SentenceTransformer model.
-        embeddings = self.model.encode(all_chunks, convert_to_tensor=True)
-        embeddings = embeddings.cpu().numpy().astype('float32')
+        embeddings = self.model.encode(all_chunks, convert_to_numpy=True)
+        #embeddings = embeddings.cpu().numpy().astype('float32')
 
         #Get the dimension of each embedding vector (384 for all-MiniLM-L6-v2).
         if embeddings.ndim == 1:
             embeddings = embeddings.reshape(1, -1)
         dim = embeddings.shape[1]
 
+        # for cosine similarity indexing, not used now
+        faiss.normalize_L2(embeddings)
         if self.index is None:
-            self.index = faiss.IndexFlatL2(dim)
+            self.index = faiss.IndexFlatIP(dim)
+
+        # for L2 similarity
+        #if self.index is None:
+        #    self.index = faiss.IndexFlatL2(dim)
 
         self.index.add(embeddings)
         self.embeddings.extend(embeddings)
 
-        #Inside a dictionary saving each chunk by assigning each to the next available integer key, will be useful for future retrival when there is a query performed
-        for idx, chunk in enumerate(all_chunks):
-            self.id_to_chunk[len(self.id_to_chunk)] = chunk # using len(self.id_to_chunk) to get the next integer, if the length is 3, then starting from 0, 1, 2 will be already used, then next integer 3 will be assigned.
+        # Tokenize for BM25
+        tokenized_chunks = [self.bm25_tokenizer(chunk) for chunk in all_chunks]
+        self.bm25_index = BM25Okapi(tokenized_chunks)
+        self.bm25_doc_tokens.extend(tokenized_chunks)
 
-    def query(self, query: str, k: int = 3) -> List[str]:
+        # Inside a dictionary saving each chunk by assigning each to the next available integer key, will be useful for future retrival when there is a query performed
+        next_id = len(self.id_to_chunk)  # Start ID for new chunks
+        for idx, (chunk, src, pgs) in enumerate(zip(all_chunks, all_sources, all_pages)):
+            self.id_to_chunk[next_id + idx] = {
+                # using len(self.id_to_chunk) to get the next integer, if the length is 3, then starting from 0, 1, 2 will be already used, then next integer 3 will be assigned.
+                "chunk_text": chunk,
+                "source": src,
+                "pages": pgs,
+            }
+
+    def _retrieve_bm25(self, query: str, candidate_size: int):
+        if not self.bm25_index:
+            return [], []
+        query_tokens = self.bm25_tokenizer(query)
+        scores = self.bm25_index.get_scores(query_tokens)
+        indices = np.argsort(scores)[::-1][:candidate_size]
+        results = []
+        for idx in indices:
+            entry = self.id_to_chunk[idx]
+            results.append({
+                "chunk_text": entry["chunk_text"],
+                "source": entry.get("source", ""),
+                "pages": entry["pages"],
+                "score": float(scores[idx])
+            })
+        return results, scores, indices
+
+    def _retrieve_faiss(self, query: str, candidate_size: int):
+        query_embedding = self.model.encode([query], convert_to_numpy=True).astype('float32')
+        # Normalize query embedding
+        faiss.normalize_L2(query_embedding)
+        scores, indices = self.index.search(query_embedding, candidate_size)
+
+        results = []
+        for i, idx in enumerate(indices[0]):
+            entry = self.id_to_chunk[idx]
+            results.append({
+                "chunk_text": entry["chunk_text"],
+                "source": entry.get("filename", ""),
+                "pages": entry["pages"],
+                "score": float(scores[0][i])
+            })
+        return results, scores[0], indices[0]
+
+    def query(self, query: str, k: int = 5, candidate_size: int = 5) -> list[Any] | RetrievalResults:
         """
         Retrieve the top-k most semantically similar chunks to the query.
 
@@ -147,17 +235,74 @@ class RetrieverSpeci:
             k (int): Number of top results to return. (default=3)
         Returns:
             List[str]: List of top-k relevant text chunks, ordered by similarity
+            :param candidate_size:
         """
-        if self.index is None:
+        if not self.index:
             return []
 
-        emb = self.model.encode([query], convert_to_numpy=True).astype('float32')
-        if emb.ndim == 1:
-            emb = emb.reshape(1, -1)
+        if candidate_size is None or candidate_size <= k:
+            candidate_size = k
 
-        D, I = self.index.search(emb,k)
+        # Stage 1: Independent Retrieval
+        # Get BM25 candidates
+        results_bm25, bm25_scores, bm25_candidates = self._retrieve_bm25(query, candidate_size)
+
+        # Get FAISS candidates
+        results_faiss, faiss_score, faiss_candidates = self._retrieve_faiss(query, candidate_size)
+        #print(faiss_candidates)
+
+        # Combine candidates (remove duplicates?)
+        combined_results = results_bm25 + results_faiss
+
+        # Combine candidates and deduplicate by chunk_text (or use source + pages if needed)
+        combined_dict = {}
+        for r in combined_results:
+            key = r["chunk_text"]
+            if key not in combined_dict:
+                combined_dict[key] = r
+
+        candidates_unique = list(combined_dict.values())
+
+        # ______Optional step: Reranking___
+        if not candidates_unique:
+            return RetrievalResults([])
+
+        # Stage 3: Prepare pairs for Cross-Encoder reranking
+        cross_inp = [(query, c["chunk_text"]) for c in candidates_unique]
+
+        # Stage 4: Predict rerank scores
+        rerank_scores = self.cross_encoder.predict(cross_inp)
+
+        # Attach rerank scores to candidates
+        for c, score in zip(candidates_unique, rerank_scores):
+            c["score"] = float(score)
+
+        # Stage 5: Sort by rerank score descending
+        candidates_unique.sort(key=lambda x: x["score"], reverse=True)
+        #  ______Optional step end___
+
+        return RetrievalResults(candidates_unique[:k])
+
+#        emb = self.model.encode([query], convert_to_numpy=True).astype('float32')
+#        if emb.ndim == 1:
+#            emb = emb.reshape(1, -1)
+        #faiss.normalize_L2(emb) # only used for cosine similarity
+#        D, I = self.index.search(emb,k)
         #use the top k indices returned by FAISS search to fetch the actual chunks from the saved dictionary containing all the chunks
-        return [self.id_to_chunk[i] for i in I[0]]
+        #return [self.id_to_chunk[i] for i in I[0]]
+
+#        # Prepare results with metadata and scores
+#       results = []
+#        for idx, score in zip(I[0], D[0]):
+#            metadata = self.id_to_chunk[idx]
+#            #print("Metadata: \n", metadata)
+#            results.append({
+#                "chunk_text": metadata["chunk_text"],
+#                "source": metadata["source"],
+#                "pages": metadata["pages"],
+#                "similarity": float(score)
+#           })
+#        return RetrievalResults(results)
 
     def save(self, dir_path:  Union[str, Path] = "./vector_index_speci"):
         """
@@ -172,7 +317,13 @@ class RetrieverSpeci:
         """
         os.makedirs(dir_path, exist_ok=True)
         faiss.write_index(self.index, os.path.join(dir_path, "faiss.index"))
-        with open(os.path.join(dir_path, "metadata.pkl"), "wb") as f:
+
+        # Save BM25 index using pickle
+        with open(os.path.join(dir_path,"bm25_index.pkl"), "wb") as f:
+            pickle.dump(self.bm25_index, f)
+
+        # Save chunks_with_metadata once for both FAISS and BM25
+        with open(os.path.join(dir_path, "chunks_with_metadata.pkl"), "wb") as f:
             pickle.dump(self.id_to_chunk, f)
 
     def load(self, dir_path:  Union[str, Path]):
@@ -183,5 +334,11 @@ class RetrieverSpeci:
             dir_path (Union[str, Path]): Directory path to load the index and metadata from.
         """
         self.index = faiss.read_index(os.path.join(dir_path, "faiss.index"))
-        with open(os.path.join(dir_path, "metadata.pkl"), "rb") as f:
+
+        # load BM25 index using pickle
+        with open(os.path.join(dir_path, "bm25_index.pkl"), "rb") as f:
+            self.bm25_index = pickle.load(f)
+
+        # load chunks_with_metadata once for both FAISS and BM25
+        with open(os.path.join(dir_path, "chunks_with_metadata.pkl"), "rb") as f:
             self.id_to_chunk = pickle.load(f)

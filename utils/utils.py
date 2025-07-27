@@ -37,6 +37,44 @@ def is_policy_related(text):
     return False
 
 def detect_task_type(question: str, contexts: List[str]) -> str:
+    q_lower = question.lower()
+
+    # Check for Yes/No type
+    if q_lower.startswith(("is ", "are ", "was ", "were ", "do ", "does ", "did ", "can ", "could ", "should ", "has ", "have ", "had ")):
+        return "yes-no"
+
+    # Hallucination detection: If there's no clear signal in context
+    if not any(any(keyword in ctx.lower() for keyword in question.lower().split()) for ctx in contexts):
+        return "hallucination"
+
+    # Check for summarization/explanation
+    if any(word in q_lower for word in ['summarize', 'summary', 'overview', 'explain', 'describe']):
+        return "summarization"
+
+    # Check for multiple choice patterns
+    if re.search(r"\b([a-z]\)|\([a-zA-Z]\)|[a-z]\.|[1-9]\d*\.|[ivx]+\.|[ivx]+\)|[A-Z]\))\s*", question):
+        return "multiple_choice"
+
+    # Classification-type signal
+    if any(word in q_lower for word in ['classify', 'categorize', 'label']):
+        return "classification"
+
+    # Comparative or ranking
+    if any(word in q_lower for word in ['higher', 'lower', 'compare', 'difference', 'rank', 'more', 'less']):
+        return "comparative"
+
+    # Inference or reasoning signal
+    if any(word in q_lower for word in ['why', 'how', 'what caused', 'derive', 'conclude', 'suggest']):
+        return "reasoning"
+
+    # Paraphrased / extractive factual recall
+    if any(word in q_lower for word in ['who', 'when', 'what', 'where', 'how much', 'how many']):
+        return "fact"
+
+    return "qa"  # fallback
+
+
+def detect_task_type2(question: str, contexts: List[str]) -> str:
     """Automatically detect task type from question/content patterns"""
     # Check for multiple choice pattern
     """

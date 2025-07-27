@@ -7,7 +7,7 @@ from sklearn.metrics import precision_recall_fscore_support
 import numpy as np
 
 
-class PipelineTester:
+class PipelineTesterSpeci:
     """
        A utility class for evaluating the current RAG system pipeline.
 
@@ -23,7 +23,7 @@ class PipelineTester:
            sim_model (SentenceTransformer): A model used for embedding-based similarity computations.
        """
 
-    def __init__(self, pipeline, test_file_path: str = "test_inputs_speci.json"):
+    def __init__(self, pipeline, test_file_path: str = "test_inputs_speci_new.json"):
         """
         Initialize the tester with a pipeline and load test cases from a file.
 
@@ -45,7 +45,7 @@ class PipelineTester:
         Returns:
             List[Dict]: A list of test case dictionaries.
         """
-        with open(path, "r") as f:
+        with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
 
     def check_grounding(self, answer: str, contexts: List[str]) -> bool:
@@ -123,7 +123,6 @@ class PipelineTester:
             answer = self.pipeline.query(test["question"])
             contexts = self.pipeline.retriever.query(test["question"])
             ground_truth = test["ground_truth"]
-
             sim_score = self.cosine_similarity(answer, ground_truth)
             sem_f1 = self.semantic_f1(answer, ground_truth)
 
@@ -133,7 +132,8 @@ class PipelineTester:
                 "question": test["question"],
                 "ground_truth": ground_truth,
                 "answer_received": answer,
-        #        "grounding_check": self._check_grounding(answer, contexts),
+                "context": contexts.chunk_text,
+        #       "grounding_check": self._check_grounding(answer, contexts),
                 "cosine_similarity": round(sim_score, 4),
                 "semantic_f1": round(sem_f1, 4)
             }
@@ -160,7 +160,7 @@ class PipelineTester:
         Args:
             results (Dict): The evaluation results to save.
         """
-        report_path = Path("test/test_report_speci.json")
+        report_path = Path(f"test/test_report_speci_new.json")
         with open(report_path, "w") as f:
             json.dump(results, f, indent=2)
         print(f"Test report saved to {report_path.absolute()}")

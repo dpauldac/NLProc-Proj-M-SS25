@@ -1,6 +1,7 @@
 openai
 hf_xet
 faiss-cpu               # FAISS vector index
+rank-bm25
 torch                   # ML framework (required by sentence-transformers)
 sentence-transformers   # Sentence embeddings
 pymupdf                 # For PDF handling (fitz)
@@ -10,4 +11,9 @@ nltk                    # package to NLP related dataset and function.
 transformers            # package to handle configuration for Generation
 docling
 spacy[transformers]
-en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.6.1/en_core_web_trf-3.6.1-py3-none-any.whl
+#en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.6.1/en_core_web_trf-3.6.1-py3-none-any.whl
+tiktoken
+protobuf
+ragas #for raagas evaluation metrics
+datasets #for raagas evaluation metrics
+LangchainLLM #for evaluation metrics

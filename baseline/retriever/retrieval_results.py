@@ -20,5 +20,21 @@ class RetrievalResults:
         return [r["source"] for r in self._results]
 
     @property
+    def pages(self):
+        return [r["pages"] for r in self._results]
+
+    @property
+    def score(self):
+        return [r["score"] for r in self._results]
+
+    @property
     def similarity(self):
         return [r["similarity"] for r in self._results]
+
+    @property
+    def bm25_score(self):
+        return [r["bm25_score"] for r in self._results]
+
+    @property
+    def cosine_score(self):
+        return [r["cosine_score"] for r in self._results]

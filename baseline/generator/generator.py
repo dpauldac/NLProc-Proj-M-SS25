@@ -1,6 +1,6 @@
 3#implement your generator here
 from typing import Any
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, GenerationConfig, set_seed
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, GenerationConfig, set_seed, AutoModel
 from typing import List, Optional
 #set_seed(42)
 from utils.utils import detect_task_type
@@ -29,8 +29,8 @@ class Generator:
         # Default config if none provided
         if generation_config is None:
             generation_config = GenerationConfig(
-               max_length=512,
-        #        temperature = 0.3,  #a bit of creativity
+       #        max_length=512,
+                temperature = 0.3,  #a bit of creativity
                 num_beams=2,    #Enables beam search. More beams = more exploration for best output, but slower.
        #         early_stopping=True, #Prevents unnecessarily long outputs with beam search.
        #         do_sample = True    #Randomly selects tokens based on probabilities.

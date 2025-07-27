@@ -1,0 +1,944 @@
+{
+  "test_0": {
+    "question": "What is the CIK number for Apple Inc.?",
+    "ground_truth": "0000320193",
+    "answer_received": "0000320193",
+    "cosine_similarity": 1.0,
+    "semantic_f1": 1.0
+  },
+  "test_1": {
+    "question": "How many shares of common stock were issued and outstanding as of October 18, 2024?",
+    "ground_truth": "15,115,823,000 shares",
+    "answer_received": "The answer is 15,116,786,000 shares.\n\nReasoning: The context states \"15,115,823,000 shares of common stock were issued and outstanding as of October 18, 2024.\" However, this is likely a typo, as the table provided earlier shows the common stock outstanding, ending balance for 2024 as 15,116,786,000.",
+    "cosine_similarity": 0.7582,
+    "semantic_f1": 0.2
+  },
+  "test_2": {
+    "question": "How many shares of common stock were issued and outstanding as of 2024?",
+    "ground_truth": "15,115,823,000 shares",
+    "answer_received": "The answer is 15,116,786.\n\nReasoning: According to the context, \"Common stock outstanding, ending balances, 2024 = 15,116,786\" in the Apple Inc. shares of common stock table.",
+    "cosine_similarity": 0.5842,
+    "semantic_f1": 0.0714
+  },
+  "test_3": {
+    "question": "What percentage of Apple's total net sales came from indirect distribution channels in 2024?",
+    "ground_truth": "62%",
+    "answer_received": "62%",
+    "cosine_similarity": 1.0,
+    "semantic_f1": 1.0
+  },
+  "test_4": {
+    "question": "How many full-time employees did Apple have as of September 28, 2024?",
+    "ground_truth": "Approximately 164,000",
+    "answer_received": "Apple had approximately 164,000 full-time equivalent employees as of September 28, 2024.\n\nReasoning: This information is directly stated in the context under \"Human Capital\".",
+    "cosine_similarity": 0.3567,
+    "semantic_f1": 0.1538
+  },
+  "test_5": {
+    "question": "What are the main factors that could adversely affect Apple\u2019s business according to their risk disclosure?",
+    "ground_truth": "Macroeconomic conditions, global supply chain dependencies, competition, and currency fluctuations.",
+    "answer_received": "According to the context, the main factors that could adversely affect Apple's business include:\n\n1. Macroeconomic and industry risks (e.g. adverse economic conditions, political events, trade and other international disputes, geopolitical tensions, conflict, terrorism, natural disasters, public health issues, industrial accidents)\n2. Unknown or currently known risks (described in Part I, Item 1A of the 2024 Form 10-K and Part II, Item 1A of the Form 10-Q for the quarter ended December 28, 2024)\n\nThese factors can lead to various negative impacts on Apple's business, results of operations, financial condition, and stock price.",
+    "cosine_similarity": 0.3363,
+    "semantic_f1": 0.1337
+  },
+  "test_6": {
+    "question": "What products, services and Software did Apple announce in the second quarter of 2024?",
+    "ground_truth": "MacBook Air 13-in and MacBook Air 15-in",
+    "answer_received": "I don't know. The context only provides information about product announcements in the Third Quarter 2024 and the second quarter of 2025, but not the second quarter of 2024.",
+    "cosine_similarity": 0.0382,
+    "semantic_f1": 0.0556
+  },
+  "test_7": {
+    "question": "How much did Apples Europe segment do in net sales in 2023?",
+    "ground_truth": "$94,294",
+    "answer_received": "According to the context, Apple's Europe segment had net sales of $94,294 in 2023. This information can be found in the first table under \"Europe, 2023 = $94,294.\"",
+    "cosine_similarity": 0.3385,
+    "semantic_f1": 0.1333
+  },
+  "test_8": {
+    "question": "How much net sales did Apple made from Mac sales in 2024?",
+    "ground_truth": "$ 29,984",
+    "answer_received": "According to the context, Apple's net sales from Mac sales in 2024 were $29,984 million. This information is found in the first table under \"Mac, 2024\".",
+    "cosine_similarity": 0.3229,
+    "semantic_f1": 0.0714
+  },
+  "test_9": {
+    "question": "What was the amount of Apple's provision for income taxes in 2024?",
+    "ground_truth": "$29,749 million",
+    "answer_received": "$29,749 million.",
+    "cosine_similarity": 0.9787,
+    "semantic_f1": 1.0
+  },
+  "test_10": {
+    "question": "What was the amount of Apple's commercial paper outstanding as of September 28, 2024?",
+    "ground_truth": "$10.0 billion",
+    "answer_received": "$10.0 billion",
+    "cosine_similarity": 1.0,
+    "semantic_f1": 1.0
+  },
+  "test_11": {
+    "question": "How much did Apple repurchase in common stock during 2024?",
+    "ground_truth": "$95.0 billion",
+    "answer_received": "Apple repurchased $95.0 billion of its common stock during 2024. This is stated in the first context: \"During 2024, the Company repurchased 499 million shares of its common stock for $95.0 billion.\"",
+    "cosine_similarity": 0.4653,
+    "semantic_f1": 0.2703
+  },
+  "test_12": {
+    "question": "What was the amount of Apple's cash and cash equivalents as of September 28, 2024?",
+    "ground_truth": "$29,943 million",
+    "answer_received": "$29,943.",
+    "cosine_similarity": 0.8751,
+    "semantic_f1": 0.6667
+  },
+  "test_13": {
+    "question": "What was the amount of Apple's total assets as of September 28, 2024?",
+    "ground_truth": "$364,980 million",
+    "answer_received": "$ 364,980",
+    "cosine_similarity": 0.8706,
+    "semantic_f1": 0.5
+  },
+  "test_14": {
+    "question": "What was the amount of Apple's total current liabilities as of September 28, 2024?",
+    "ground_truth": "$176,392 million",
+    "answer_received": "The amount of Apple's total current liabilities as of September 28, 2024 was $176,392.",
+    "cosine_similarity": 0.3011,
+    "semantic_f1": 0.125
+  },
+  "test_15": {
+    "question": "What was the amount of Apple's total shareholders' equity as of September 28, 2024?",
+    "ground_truth": "$56,950 million",
+    "answer_received": "The amount of Apple's total shareholders' equity as of September 28, 2024 was $56,950.",
+    "cosine_similarity": 0.3366,
+    "semantic_f1": 0.125
+  },
+  "test_16": {
+    "question": "What was the amount of Apple's net income in 2024?",
+    "ground_truth": "$93,736 million",
+    "answer_received": "I don't know. The context does not provide the net income of Apple for the year 2024. It provides the net income for the three- and six-month periods ended March 29, 2025, and March 30, 2024, but not for the full year 2024.",
+    "cosine_similarity": 0.1571,
+    "semantic_f1": 0.0
+  },
+  "test_17": {
+    "question": "What was the amount of cash generated by operating activities in 2024?",
+    "ground_truth": "$118,254 million",
+    "answer_received": "I don't know. The context does not provide a specific answer to this question. It provides cash generated by operating activities for different periods, such as Three Months Ended December 28, 2024, Six Months Ended March 29, 2025, and Years ended September 28, 2024, but not for the entire year 2024.",
+    "cosine_similarity": 0.2099,
+    "semantic_f1": 0.0
+  },
+  "test_18": {
+    "question": "What was the amount of Apple's total deferred revenue as of September 28, 2024?",
+    "ground_truth": "$12.8 billion",
+    "answer_received": "$12.8 billion",
+    "cosine_similarity": 1.0,
+    "semantic_f1": 1.0
+  },
+  "test_19": {
+    "question": "What is the basic earnings per share for Apple stock for the year 2024?",
+    "ground_truth": "$6.11",
+    "answer_received": "The basic earnings per share for Apple stock for the year 2024 is $6.11.",
+    "cosine_similarity": 0.3855,
+    "semantic_f1": 0.1333
+  },
+  "test_20": {
+    "question": "What was the total amount of unrecognized compensation cost related to outstanding RSUs as of September 28, 2024?",
+    "ground_truth": "$19.4 billion",
+    "answer_received": "$19.4 billion",
+    "cosine_similarity": 1.0,
+    "semantic_f1": 1.0
+  },
+  "test_21": {
+    "question": "What was the total amount of unrecognized compensation cost related to outstanding Restricted Stock Units as of September 28, 2024?",
+    "ground_truth": "$19.4 billion",
+    "answer_received": "The question is about Apple Inc., not Amazon Com Inc. According to the context, as of September 28, 2024, the total unrecognized compensation cost related to outstanding RSUs was $19.4 billion.",
+    "cosine_similarity": 0.3767,
+    "semantic_f1": 0.1212
+  },
+  "test_22": {
+    "question": "Which product category experienced the largest percentage decline in net sales in 2024 compared to 2023?",
+    "ground_truth": "Wearables, Home and Accessories (-7%)",
+    "answer_received": "Mac, with a 27% decline.",
+    "cosine_similarity": 0.3245,
+    "semantic_f1": 0.0
+  },
+  "test_23": {
+    "question": "Which product category had the highest gross margin percentage in 2024?",
+    "ground_truth": "Services (73.9%)",
+    "answer_received": "Services, with a gross margin percentage of 73.9%.",
+    "cosine_similarity": 0.8668,
+    "semantic_f1": 0.5455
+  },
+  "test_24": {
+    "question": "Compare the amount of Apple's total assets as of 2024 and 2023?",
+    "ground_truth": "Total asset as of 2024 is $364,980 compared to $352,583 million in 2023. So, in 2024 total asset increased.",
+    "answer_received": "Total assets as of 2024: $364,980\nTotal assets as of 2023: $352,583",
+    "cosine_similarity": 0.8452,
+    "semantic_f1": 0.7333
+  },
+  "test_25": {
+    "question": "Which country outside the U.S. accounted for the largest portion of Apple's net sales in 2024?",
+    "ground_truth": "China",
+    "answer_received": "China accounted for the largest portion of Apple's net sales in 2024, with net sales of $66,952 million.",
+    "cosine_similarity": 0.3301,
+    "semantic_f1": 0.1053
+  },
+  "test_26": {
+    "question": "How does Apple\u2019s net sales from products compare to services in FY2024?",
+    "ground_truth": "Product revenue was $294,866 million, which was higher than services revenue $96,169 million.",
+    "answer_received": "In FY2024, Apple's net sales from products were $294,866, while net sales from services were $96,169.",
+    "cosine_similarity": 0.5252,
+    "semantic_f1": 0.4138
+  },
+  "test_27": {
+    "question": "How does Apple\u2019s net sales from products compare to services as of September 28, 2024?",
+    "ground_truth": "Product revenue was $294,866 million, which was higher than services revenue $96,169 million.",
+    "answer_received": "As of September 28, 2024, Apple's net sales from products ($294,866) are approximately 3 times its net sales from services ($96,169).",
+    "cosine_similarity": 0.5386,
+    "semantic_f1": 0.2353
+  },
+  "test_28": {
+    "question": "Compare Apple\u2019s Research and development expenses to selling, general and administrative expenses in September 28,2024?",
+    "ground_truth": "Apple spent more on Research and development than selling, general and administrative expenses.",
+    "answer_received": "Research and development expenses: $31,370. Selling, general and administrative expenses: $26,097.",
+    "cosine_similarity": 0.5314,
+    "semantic_f1": 0.7024
+  },
+  "test_29": {
+    "question": "Compare Apple\u2019s net sales from iPhone and iPad in FY2023 and FY2024.",
+    "ground_truth": "iPhone revenue was substantially higher than iPad revenue.",
+    "answer_received": "In FY2023, iPhone net sales were $200,583 million and iPad net sales were $28,300 million. In FY2024, iPhone net sales were $201,183 million and iPad net sales were $26,694 million.",
+    "cosine_similarity": 0.6212,
+    "semantic_f1": 0.3117
+  },
+  "test_30": {
+    "question": "Compare Apple\u2019s operating income in the Americas to Europe in FY2024.",
+    "ground_truth": "Americas net sales $ 167,045 million was significantly higher than Europe $101,328 million.",
+    "answer_received": "In FY2024, Apple's operating income in the Americas was $67,656, while in Europe it was $41,790.",
+    "cosine_similarity": 0.5326,
+    "semantic_f1": 0.24
+  },
+  "test_31": {
+    "question": "Compare Apple\u2019s operating income from the Americas to Europe in Q2 FY2025.",
+    "ground_truth": "Americas revenue $38,283 million was significantly higher than Europe operating income $24,923 million.",
+    "answer_received": "Operating income in Americas: $16,774. Operating income in Europe: $10,316.",
+    "cosine_similarity": 0.6886,
+    "semantic_f1": 0.4068
+  },
+  "test_32": {
+    "question": "Compare Apple\u2019s operating income from the Americas to Europe in after Six Months Ended of 2025.",
+    "ground_truth": "Americas revenue $38,283 million was significantly higher than Europe operating income $24,923 million.",
+    "answer_received": "Based on the context, the operating income for the Americas after Six Months Ended of 2025 is $38,283, and for Europe, it is $10,316 + $7,748 = $18,064. Therefore, the operating income from the Americas is higher than Europe.\n\nSo, the answer is: Apple's operating income from the Americas is higher than Europe.",
+    "cosine_similarity": 0.709,
+    "semantic_f1": 0.4821
+  },
+  "test_33": {
+    "question": "Compare R&D expense between Q1 FY2025 and Q1 FY2024.",
+    "ground_truth": "R&D expense increased from $7,903 million in Q1 FY2024 to $8,550 million in Q1 FY2025.",
+    "answer_received": "I don't know. The context only provides information about Apple Inc.'s R&D expense growth from 2023 to 2024, but does not provide specific figures for Q1 FY2024 and Q1 FY2025.",
+    "cosine_similarity": 0.6794,
+    "semantic_f1": 0.3556
+  },
+  "test_34": {
+    "question": "Describe Apple's effective tax rate for 2024 and why was it higher than the statutory rate?",
+    "ground_truth": "24.1%, primarily due to a one-time income tax charge of $10.2 billion related to the State Aid Decision",
+    "answer_received": "According to the context, Apple's effective tax rate for 2024 was 24.1%, which was higher than the statutory federal income tax rate of 21%. The primary reason for this difference was a one-time income tax charge of $10.2 billion, net, related to the State Aid Decision, as well as state income taxes. This was partially offset by a lower effective tax rate on foreign earnings, the impact of the U.S. federal R&D credit, and tax benefits from share-based compensation.",
+    "cosine_similarity": 0.5938,
+    "semantic_f1": 0.5684
+  },
+  "test_35": {
+    "question": "Describe the role of AppleCare in Apple\u2019s business.",
+    "ground_truth": "AppleCare provides technical support and service coverage, accidental damage or theft and loss coverage.",
+    "answer_received": "AppleCare provides fee-based service and support products, offering priority access to technical support, repair and replacement services, and additional coverage for accidental damage or theft and loss, depending on the country and product type.",
+    "cosine_similarity": 0.9003,
+    "semantic_f1": 0.6923
+  },
+  "test_36": {
+    "question": "Explain the Business Risks of Apple?",
+    "ground_truth": "Apple faces business risks including the need to constantly innovate, manage product transitions, address market acceptance challenges, and mitigate issues like production delays, quality defects, and supply-demand mismatches.",
+    "answer_received": "The context lists several business risks faced by Apple Inc., including:\n\n1. Macroeconomic and industry risks, such as adverse economic conditions, political events, trade disputes, and natural disasters.\n2. Risks associated with investments in new business strategies and acquisitions, including distraction of management, greater-than-expected liabilities, and inadequate return on capital.\n3. Industrial accidents at suppliers and contract manufacturers, which could result in serious injuries, loss of life, and disruption to Apple's business.\n4. Major public health issues, such as pandemics, which could affect the global economy and demand for consumer products.\n5. Design and manufacturing defects in Apple's products and services, which could result in harm to the company's reputation and financial losses.\n6. Intense media, political, and regulatory scrutiny, which exposes Apple to increasing regulation, government investigations, legal actions, and penalties.\n\nThese risks could materially adversely affect Apple's business, results of operations, financial condition, and stock price.",
+    "cosine_similarity": 0.8298,
+    "semantic_f1": 0.371
+  },
+  "test_37": {
+    "question": "Explain the Services offered by Apple?",
+    "ground_truth": "Services offered by Apple are Advertising, AppleCare, Cloud Services,  Digital Content and Payment Services",
+    "answer_received": "According to the context, Apple's cloud services store and keep customers' content up-to-date and available across multiple Apple devices and Windows personal computers. Additionally, Apple offers complex hardware and software products and services, including sophisticated operating system software and applications.",
+    "cosine_similarity": 0.708,
+    "semantic_f1": 0.4341
+  },
+  "test_38": {
+    "question": "Explain Apple's Earnings Per Share?",
+    "ground_truth": "Apple's Earnings Per Share (EPS) is calculated by dividing net income (numerator) by weighted-average shares outstanding (denominator). The provided table shows the computation for basic and diluted earnings per share for 2024, 2023, and 2022. For 2024, net income was $93,736 million, basic shares outstanding were 15,343,783 thousand, and diluted shares were 15,408,095 thousand, resulting in basic earnings per share of $6.11 and diluted earnings per share of $6.08. For 2023, basic EPS was $6.16 and diluted EPS was $6.13, and for 2022, basic EPS was $6.15 and diluted EPS was $6.11.",
+    "answer_received": "The context provides detailed information about Apple's earnings per share (EPS) for various periods, including 2022, 2023, 2024, and the three and six months ended December 28, 2024, December 30, 2023, March 29, 2025, and March 30, 2024. \n\nIt shows the computation of basic and diluted EPS, including net income, weighted-average basic and diluted shares outstanding, and the effect of dilutive share-based awards. The EPS values are provided for each period, with basic EPS ranging from $1.53 to $6.16 and diluted EPS ranging from $1.53 to $6.13.",
+    "cosine_similarity": 0.9019,
+    "semantic_f1": 0.6703
+  },
+  "test_39": {
+    "question": "Give an overview of Apple's newly announced products in Q2 2025?",
+    "ground_truth": "During the second quarter of 2025, the Company announced iPhone 16e, iPad Air, iPad, MacBook Air, Mac Studio.",
+    "answer_received": "In Q2 2025, Apple announced the following new or updated products: iPhone 16e, iPad Air, iPad, Mac Studio, and MacBook Air.",
+    "cosine_similarity": 0.8506,
+    "semantic_f1": 0.6667
+  },
+  "test_40": {
+    "question": "Did Apple's Greater China segment experience an increase or decrease in net sales in 2024 compared to 2023?",
+    "ground_truth": "Decrease",
+    "answer_received": "The answer is: Yes, a decrease.\n\nJustification: According to the context, \"Greater China net sales decreased during 2024 compared to 2023 due primarily to lower net sales of iPhone and iPad.\"",
+    "cosine_similarity": 0.4871,
+    "semantic_f1": 0.1212
+  },
+  "test_41": {
+    "question": "Does Apple expect to recognize all of its deferred revenue within the next three years?",
+    "ground_truth": "No, 2% is expected to be recognized in greater than three years",
+    "answer_received": "No.\n\nJustification: As of March 29, 2025, the Company expects 1% of total deferred revenue to be realized in greater than three years.",
+    "cosine_similarity": 0.5733,
+    "semantic_f1": 0.5143
+  },
+  "test_42": {
+    "question": "Does Apple has its own operating systems?",
+    "ground_truth": "Yes",
+    "answer_received": "Yes. According to the context, Apple has its own operating systems, including iOS, macOS, iPadOS, watchOS, visionOS, and tvOS.",
+    "cosine_similarity": 0.1533,
+    "semantic_f1": 0.1
+  },
+  "test_43": {
+    "question": "Is Apple's Mac's operating systems called MacOS?",
+    "ground_truth": "Yes",
+    "answer_received": "Yes. According to the context, \"Mac is the Company's line of personal computers based on its macOS operating system.\"",
+    "cosine_similarity": 0.1825,
+    "semantic_f1": 0.1
+  },
+  "test_44": {
+    "question": "Does Apple operate retail stores worldwide?",
+    "ground_truth": "Yes",
+    "answer_received": "Yes. The context states that \"net sales for geographic segments are generally based on the location of customers and sales through the Company's retail stores located in those geographic locations.\" This implies that Apple operates retail stores in multiple geographic locations, including the Americas, Europe, Greater China, Japan, and Rest of Asia Pacific.",
+    "cosine_similarity": 0.0968,
+    "semantic_f1": 0.037
+  },
+  "test_45": {
+    "question": "Does Apple has operating segment in Europe?",
+    "ground_truth": "Yes.",
+    "answer_received": "Yes. The context explicitly mentions \"Europe\" as one of the reportable segments of Apple Inc.",
+    "cosine_similarity": 0.1679,
+    "semantic_f1": 0.125
+  },
+  "test_46": {
+    "question": "Does Apple offer cloud-based services?",
+    "ground_truth": "Yes.",
+    "answer_received": "Yes. The context states that Apple offers cloud services that store and keep customers' content up-to-date and available across multiple Apple devices and Windows personal computers.",
+    "cosine_similarity": 0.1676,
+    "semantic_f1": 0.0741
+  },
+  "test_47": {
+    "question": "Does Apple\u2019s Services category include AppleCare?",
+    "ground_truth": "Yes",
+    "answer_received": "No. \n\nThe context mentions AppleCare as a separate entity from Services, and it is not included in the Services category in the table showing net sales by category.",
+    "cosine_similarity": 0.1547,
+    "semantic_f1": 0.0
+  },
+  "test_48": {
+    "question": "Does Apple list its common stock on the NASDAQ?",
+    "ground_truth": "Yes",
+    "answer_received": "Yes. The context states that \"The Company's Common Stock is listed on The Nasdaq Stock Market LLC under the trading symbol 'AAPL.'\"",
+    "cosine_similarity": 0.0917,
+    "semantic_f1": 0.087
+  },
+  "test_49": {
+    "question": "Does Apple have any lease arrangements?",
+    "ground_truth": "Yes",
+    "answer_received": "Yes. The context explicitly states that \"The Company has lease arrangements for certain equipment and facilities, including corporate, data center, manufacturing and retail space.\"",
+    "cosine_similarity": 0.1436,
+    "semantic_f1": 0.08
+  },
+  "test_50": {
+    "question": "Does Apple offer dividends to shareholders?",
+    "ground_truth": "Yes",
+    "answer_received": "Yes. According to the context, Apple's Board of Directors declares dividends from time to time, and the company has a quarterly cash dividend of $0.25 per share as of December 28, 2024.",
+    "cosine_similarity": 0.0846,
+    "semantic_f1": 0.0606
+  },
+  "test_51": {
+    "question": "Was Timothy Cook Apple\u2019s CEO in 2024?",
+    "ground_truth": "Yes",
+    "answer_received": "Yes. According to the context, Timothy D. Cook is listed as the Chief Executive Officer (Principal Executive Officer) in the Power of Attorney document dated November 1, 2024.",
+    "cosine_similarity": 0.1346,
+    "semantic_f1": 0.069
+  },
+  "test_52": {
+    "question": "Does Apple sell Fighter Jet?",
+    "ground_truth": "No",
+    "answer_received": "I don't know. The context does not mention Apple selling fighter jets. It only mentions Apple's customers, distribution channels, and products/services, but does not mention fighter jets.",
+    "cosine_similarity": 0.0873,
+    "semantic_f1": 0.1379
+  },
+  "test_53": {
+    "question": "Does Apple has products named Galaxy S15?",
+    "ground_truth": "No",
+    "answer_received": "No. The context only mentions Apple products such as iPhone, Apple Watch, AirPods, etc., but does not mention Galaxy S15, which is a product from a different company (Samsung).",
+    "cosine_similarity": 0.1739,
+    "semantic_f1": 0.129
+  },
+  "test_54": {
+    "question": "Does Apple hold cryptocurrency on its balance sheet?",
+    "ground_truth": "No",
+    "answer_received": "I don't know. There is no mention of cryptocurrency in the provided context.",
+    "cosine_similarity": 0.11,
+    "semantic_f1": 0.1429
+  },
+  "test_55": {
+    "question": "Did Apple announced new iPhone 16e in Q2 2025?",
+    "ground_truth": "Yes.",
+    "answer_received": "Yes. According to the context, \"During the second quarter of 2025, the Company announced the following new or updated products: \u00b7 iPhone 16e...\"",
+    "cosine_similarity": 0.2205,
+    "semantic_f1": 0.0833
+  },
+  "test_56": {
+    "question": "Which one is Apple's own operating systems? a)Android OS, b)iOS c)Windows OS, d)Wear OS",
+    "ground_truth": "b)iOS",
+    "answer_received": "b) iOS",
+    "cosine_similarity": 1.0,
+    "semantic_f1": 0.6667
+  },
+  "test_57": {
+    "question": "Which one is not Apple's own operating systems? a)macOS , b)iOS c)iPadOS,d)AndroidOS",
+    "ground_truth": "d)Android OS",
+    "answer_received": "The correct answer is d) AndroidOS.",
+    "cosine_similarity": 0.7364,
+    "semantic_f1": 0.0
+  },
+  "test_58": {
+    "question": "What is the operating system of Apple's iPad? a)macOS , b)iOS c)iPadOS, d)AndroidOS",
+    "ground_truth": "c)iPadOS",
+    "answer_received": "c) iPadOS",
+    "cosine_similarity": 1.0,
+    "semantic_f1": 0.6667
+  },
+  "test_59": {
+    "question": "Where does Apple don't have any operating segment A. Europe, B. Americas C. Africa ?",
+    "ground_truth": "C. Africa",
+    "answer_received": "The correct answer is C. Africa. According to the context, Europe includes European countries, as well as India, the Middle East, and Africa. This means that Apple does have an operating segment in Africa, which is part of the Europe segment.",
+    "cosine_similarity": 0.5757,
+    "semantic_f1": 0.1778
+  },
+  "test_60": {
+    "question": "In which geographical segment apple have it's bussiness?  A) Europe, B) Americas C) Africa D) Both A and B?",
+    "ground_truth": "D) Both A and B",
+    "answer_received": "The correct answer is D) Both A and B.\n\nAccording to the context, Apple Inc. manages its business on a geographic basis, and its reportable segments consist of the Americas, Europe, Greater China, Japan, and Rest of Asia Pacific.",
+    "cosine_similarity": 0.517,
+    "semantic_f1": 0.3404
+  },
+  "test_61": {
+    "question": "Which service is not offered by Apple? i)Delivery Servicess, ii)Cloud Services, iii)AppleCare",
+    "ground_truth": "i)Delivery Servicess",
+    "answer_received": "The correct answer is i) Delivery Services.\n\nThe context does not mention \"Delivery Services\" as one of the services offered by Apple. It mentions AppleCare, Cloud Services, and other services like iCloud, Siri, and Maps, but not Delivery Services.",
+    "cosine_similarity": 0.6966,
+    "semantic_f1": 0.375
+  },
+  "test_62": {
+    "question": "What is the  Apple's net sales in Americas in 2024? i)$162,560 million, ii)$101,328  million, iii)$167,045 million iv)$5 million",
+    "ground_truth": "iii)$167,045 million",
+    "answer_received": "I don't know. The context does not provide the net sales of Apple in Americas for 2024.",
+    "cosine_similarity": 0.1958,
+    "semantic_f1": 0.0
+  },
+  "test_63": {
+    "question": "What was the percentage change in Europe segment operating income from 2023 to 2024?",
+    "ground_truth": "15.8% increase (from 36,098 to 41,790)",
+    "answer_received": "I don't know. The context does not provide the operating income for the Europe segment in 2023 and 2024.",
+    "cosine_similarity": 0.1743,
+    "semantic_f1": 0.0
+  },
+  "test_64": {
+    "question": "What percentage of Apple's total net sales came from Services in 2024?",
+    "ground_truth": "24.6% (96,169 / 391,035)",
+    "answer_received": "I don't know. The provided context does not explicitly state the percentage of Apple's total net sales that came from Services in 2024.",
+    "cosine_similarity": 0.3906,
+    "semantic_f1": 0.0
+  },
+  "test_65": {
+    "question": "What was the main reason for the increase in Research and Development expenses in 2024?",
+    "ground_truth": "Because of increases in headcount-related expenses",
+    "answer_received": "The main reason for the increase in Research and Development expenses in 2024 was driven primarily by increases in headcount-related expenses.",
+    "cosine_similarity": 0.7505,
+    "semantic_f1": 0.4848
+  },
+  "test_66": {
+    "question": "What was the main reason for the increase in Research and Development expenses in 2024?",
+    "ground_truth": "Because of increases in headcount-related expenses",
+    "answer_received": "The main reason for the increase in Research and Development expenses in 2024 was driven primarily by increases in headcount-related expenses.",
+    "cosine_similarity": 0.7505,
+    "semantic_f1": 0.4848
+  },
+  "test_67": {
+    "question": "Did Apple acquire Netflix in Q2 2025?",
+    "ground_truth": "I dont know, no context found.",
+    "answer_received": "I don't know. The context does not mention Apple acquiring Netflix in Q2 2025. It only provides information about Apple's internal control over financial reporting and purchases of equity securities by the issuer and affiliated purchasers.",
+    "cosine_similarity": 0.1214,
+    "semantic_f1": 0.2381
+  },
+  "test_68": {
+    "question": "Does Apple manufacture submarines according to its 10-Q?",
+    "ground_truth": "I dont know, no context found.",
+    "answer_received": "I don't know. The context does not mention submarines or any related information. It only talks about Apple's manufacturing purchase obligations for its products and components.",
+    "cosine_similarity": 0.2856,
+    "semantic_f1": 0.3125
+  },
+  "test_69": {
+    "question": "Was Apple sued for selling fake diamonds in Q2 2025?",
+    "ground_truth": "I dont know, no context found.",
+    "answer_received": "I don't know. The context does not mention anything about Apple being sued for selling fake diamonds in Q2 2025.",
+    "cosine_similarity": 0.2326,
+    "semantic_f1": 0.3846
+  },
+  "test_70": {
+    "question": "What was Amazon's net income for the three months ended September 30, 2024?",
+    "ground_truth": "$15,328 million",
+    "answer_received": "$ 15,328.",
+    "cosine_similarity": 0.8534,
+    "semantic_f1": 0.5
+  },
+  "test_71": {
+    "question": "What was the amount of the jury award to Kove IO, Inc. in the patent infringement case?",
+    "ground_truth": "$525 million",
+    "answer_received": "$525 million",
+    "cosine_similarity": 1.0,
+    "semantic_f1": 1.0
+  },
+  "test_72": {
+    "question": "How many shares of common stock were outstanding as of October 18, 2024?",
+    "ground_truth": "10,515,011,008 shares",
+    "answer_received": "The answer is 15,115,823,000 shares.\n\nReasoning: According to the context, \"15,115,823,000 shares of common stock were issued and outstanding as of October 18, 2024\" in the section about Apple Inc.",
+    "cosine_similarity": 0.5007,
+    "semantic_f1": 0.1176
+  },
+  "test_73": {
+    "question": "What was the total cash paid for income taxes for the nine months ended September 30, 2024?",
+    "ground_truth": "$8,162 million",
+    "answer_received": "8,162.",
+    "cosine_similarity": 0.6424,
+    "semantic_f1": 0.6667
+  },
+  "test_74": {
+    "question": "How much did Amazon invest in Anthropic during Q1 2024?",
+    "ground_truth": "$2.75 billion",
+    "answer_received": "I don't know.\n\nThe context states that Amazon invested $2.75 billion in a second convertible note from Anthropic in Q1 2024, but it does not specify if this is the total investment in Anthropic during Q1 2024. There might be other investments not mentioned in the context.",
+    "cosine_similarity": 0.3922,
+    "semantic_f1": 0.0816
+  },
+  "test_75": {
+    "question": "What was Amazon's total assets as of September 30, 2024?",
+    "ground_truth": "$584,626 million",
+    "answer_received": "$584,626.",
+    "cosine_similarity": 0.9082,
+    "semantic_f1": 0.6667
+  },
+  "test_76": {
+    "question": "What was the amount of the jury award to Kove IO, Inc. in the patent infringement case?",
+    "ground_truth": "$525 million",
+    "answer_received": "$525 million",
+    "cosine_similarity": 1.0,
+    "semantic_f1": 1.0
+  },
+  "test_77": {
+    "question": "What was Amazon's revenue from advertising services in Q3 2024?",
+    "ground_truth": "$14,331 million",
+    "answer_received": "According to the context, Amazon's revenue from advertising services in Q3 2024 was $14,331 million.",
+    "cosine_similarity": 0.4939,
+    "semantic_f1": 0.2353
+  },
+  "test_78": {
+    "question": "Did Amazon's total net sales increase in Q3 2024 compared to Q3 2023?",
+    "ground_truth": "Yes.",
+    "answer_received": "Yes. Although the context does not provide a direct comparison of total net sales between Q3 2024 and Q3 2023, it mentions that International sales increased 12% and AWS sales increased 19% in Q3 2024 compared to the comparable prior year periods, which suggests an overall increase in total net sales.",
+    "cosine_similarity": 0.1363,
+    "semantic_f1": 0.0385
+  },
+  "test_79": {
+    "question": "Is the AWS segment's operating income higher than the International segment's in Q3 2024?",
+    "ground_truth": "Yes",
+    "answer_received": "Yes. The context does not provide the specific operating income for Q3 2024, but it provides the operating income for other periods. However, based on the trend and magnitude of operating income in other periods, it can be inferred that AWS operating income is higher than International operating income in Q3 2024.",
+    "cosine_similarity": 0.0824,
+    "semantic_f1": 0.0377
+  },
+  "test_80": {
+    "question": "Did Amazon repurchase any common stock during the nine months ended September 30, 2024?",
+    "ground_truth": "No",
+    "answer_received": "No. According to the context, \"There were no repurchases of our common stock during the nine months ended September 30, 2024.\"",
+    "cosine_similarity": 0.171,
+    "semantic_f1": 0.1739
+  },
+  "test_81": {
+    "question": "Does Amazon expect to meet all its financial obligations for the next 12 months?",
+    "ground_truth": "Yes",
+    "answer_received": "Yes. According to the context, Amazon believes that \"cash flows generated from operations and our cash, cash equivalents, and marketable securities balances, as well as our borrowing arrangements, will be sufficient to meet our anticipated operating cash needs for at least the next twelve months.\"",
+    "cosine_similarity": 0.16,
+    "semantic_f1": 0.0435
+  },
+  "test_82": {
+    "question": "Is Amazon currently considered an emerging growth company?",
+    "ground_truth": "No",
+    "answer_received": "No. According to the context, Amazon has marked \"Emerging growth company\" as \u2610, indicating that it is not an emerging growth company.",
+    "cosine_similarity": 0.1958,
+    "semantic_f1": 0.1667
+  },
+  "test_83": {
+    "question": "Did Amazon's net income exceed $15,000 million in Q3 2024?",
+    "ground_truth": "Yes",
+    "answer_received": "I don't know. The context does not provide information about Amazon's net income. It only provides information about operating income, interest income, and interest expense.",
+    "cosine_similarity": 0.0656,
+    "semantic_f1": 0.0
+  },
+  "test_84": {
+    "question": "Did Amazon's net income exceed $15 billion in Three Months Ended September 30, 2024?",
+    "ground_truth": "Yes",
+    "answer_received": "Yes. According to the context, Net income, Three Months Ended September 30, 2024 = $15,328, which exceeds $15 billion.",
+    "cosine_similarity": 0.1126,
+    "semantic_f1": 0.1
+  },
+  "test_85": {
+    "question": "Did Amazon's International segment report an operating loss in Q3 2024?",
+    "ground_truth": "No",
+    "answer_received": "No. According to the context, International operating income in Q3 2024 was $1,301 million, which is a profit, not a loss.",
+    "cosine_similarity": 0.1295,
+    "semantic_f1": 0.1739
+  },
+  "test_86": {
+    "question": "Did net cash from operating activities decrease in the nine months ended September 2024 compared to 2023?",
+    "ground_truth": "No",
+    "answer_received": "No. Net cash from operating activities increased from $42,481 in the nine months ended September 2023 to $70,241 in the nine months ended September 2024.",
+    "cosine_similarity": 0.1727,
+    "semantic_f1": 0.0769
+  },
+  "test_87": {
+    "question": "Has Amazon fully utilized its $10 billion stock repurchase authorization as of September 2024?",
+    "ground_truth": "No",
+    "answer_received": "No. As of September 30, 2024, Amazon has $6.1 billion remaining under the repurchase program, indicating that it has not fully utilized the $10 billion authorization.",
+    "cosine_similarity": 0.1466,
+    "semantic_f1": 0.1429
+  },
+  "test_88": {
+    "question": "Does Amazon expect cash capital expenditures to decrease in 2024?",
+    "ground_truth": "No",
+    "answer_received": "No. According to the context, Amazon expects cash capital expenditures to \"meaningfully increase\" in 2024, primarily driven by investments in technology infrastructure.",
+    "cosine_similarity": 0.158,
+    "semantic_f1": 0.087
+  },
+  "test_89": {
+    "question": "Is the fair value of Amazon's Rivian investment higher as of September 2024 compared to December 2023?",
+    "ground_truth": "No",
+    "answer_received": "No. \n\nThe fair value of Amazon's Rivian investment was $3.7 billion as of December 31, 2023, and $1.8 billion as of September 30, 2024.",
+    "cosine_similarity": 0.1577,
+    "semantic_f1": 0.08
+  },
+  "test_90": {
+    "question": "Did Amazon record any acquisitions during Q3 2024?",
+    "ground_truth": "Yes.",
+    "answer_received": "Answer: No.\n\nJustification: The context mentions acquisition activity in 2024, but it does not specify any acquisitions during Q3 2024. The acquisition of 1Life Healthcare, Inc. (One Medical) was in 2023, and the $780 million acquisition activity in 2024 is mentioned, but it does not specify the quarter.",
+    "cosine_similarity": 0.117,
+    "semantic_f1": 0.0408
+  },
+  "test_91": {
+    "question": "Does Amazon have any preferred stock issued and outstanding?",
+    "ground_truth": "No",
+    "answer_received": "No. According to the context, \"No preferred stock was outstanding for any year presented\" and the preferred stock sections in the balance sheets show a value of \"-\".",
+    "cosine_similarity": 0.1353,
+    "semantic_f1": 0.069
+  },
+  "test_92": {
+    "question": "Were foreign exchange rates favorable to Amazon's International segment in Q3 2024?",
+    "ground_truth": "No",
+    "answer_received": "No. According to the context, \"Changes in foreign exchange rates did not significantly impact International net sales for Q3 2024, but reduced International net sales by $1.3 billion for the nine months ended September 30, 2024.\" This implies that foreign exchange rates were not favorable to Amazon's International segment in Q3 2024, but rather had a neutral impact.",
+    "cosine_similarity": 0.1603,
+    "semantic_f1": 0.0984
+  },
+  "test_93": {
+    "question": "Does Amazon's credit agreement contain financial covenants?",
+    "ground_truth": "No",
+    "answer_received": "No. The context states that \"The 2024 Short-Term Credit Agreement ... does not contain financial covenants.\"",
+    "cosine_similarity": 0.0881,
+    "semantic_f1": 0.2222
+  },
+  "test_94": {
+    "question": "Has the Luxembourg tax authority finalized its assessment regarding Amazon's intangible assets?",
+    "ground_truth": "No",
+    "answer_received": "I don't know. The context states that the Luxembourg tax authority (\"LTA\") denied the tax basis of certain intangible assets in September 2022, but it does not mention that the assessment has been finalized.",
+    "cosine_similarity": 0.093,
+    "semantic_f1": 0.0571
+  },
+  "test_95": {
+    "question": "Did Amazon's inventory levels decrease from December 2023 to September 2024?",
+    "ground_truth": "No",
+    "answer_received": "No. According to the context, Inventories were $33,318 as of December 31, 2023, and $36,103 as of September 30, 2024, indicating an increase in inventory levels.",
+    "cosine_similarity": 0.1372,
+    "semantic_f1": 0.0741
+  },
+  "test_96": {
+    "question": "Is Amazon currently disputing tax assessments in multiple jurisdictions?",
+    "ground_truth": "Yes",
+    "answer_received": "Yes. According to the context, \"We are currently disputing tax assessments in multiple jurisdictions, including with respect to the allocation and characterization of income.\"",
+    "cosine_similarity": 0.1733,
+    "semantic_f1": 0.08
+  },
+  "test_97": {
+    "question": "Did Amazon's stock-based compensation expense increase in Q3 2024 compared to Q3 2023?",
+    "ground_truth": "No",
+    "answer_received": "I don't know.",
+    "cosine_similarity": 0.1984,
+    "semantic_f1": 0.0
+  },
+  "test_98": {
+    "question": "Is Amazon involved in litigation regarding Alexa-enabled products?",
+    "ground_truth": "Yes.",
+    "answer_received": "Yes. According to the context, Amazon is involved in litigation regarding Alexa-enabled products in two separate cases: one filed by Rensselaer Polytechnic Institute and CF Dynamic Advances LLC in May 2018, and another filed by Dialect, LLC in May 2023.",
+    "cosine_similarity": 0.1281,
+    "semantic_f1": 0.0488
+  },
+  "test_99": {
+    "question": "Is Amazon currently disputing tax assessments in Russia?",
+    "ground_truth": "No",
+    "answer_received": "I don't know. The context does not mention Russia as one of the jurisdictions where Amazon is disputing tax assessments.",
+    "cosine_similarity": 0.0427,
+    "semantic_f1": 0.0952
+  },
+  "test_100": {
+    "question": "What was the primary reason for Amazon's reduced depreciation expense in 2024?",
+    "ground_truth": "Change in server useful life estimate",
+    "answer_received": "The primary reason for Amazon's reduced depreciation expense in 2024 was the change in the estimated useful life of servers from five to six years, effective January 1, 2024.",
+    "cosine_similarity": 0.493,
+    "semantic_f1": 0.3889
+  },
+  "test_101": {
+    "question": "Which segment showed the highest year-over-year operating income growth in Q3 2024? a. North America b. International c. AWS d) None of them.",
+    "ground_truth": "International",
+    "answer_received": "b",
+    "cosine_similarity": 0.265,
+    "semantic_f1": 0.0
+  },
+  "test_102": {
+    "question": "What was Amazon's total net sales for Q3 2024? a)$143,083 millions b)$158,877 millions c)$143,083 billion d)$227,395 billion",
+    "ground_truth": "b) $158.877 billion",
+    "answer_received": "b)",
+    "cosine_similarity": 0.4118,
+    "semantic_f1": 0.5
+  },
+  "test_103": {
+    "question": "Which segment contributed the most to Amazon's operating income in Q3 2024?  a. North America b. International c. AWS d) None of them.",
+    "ground_truth": "AWS",
+    "answer_received": "c",
+    "cosine_similarity": 0.3132,
+    "semantic_f1": 0.0
+  },
+  "test_104": {
+    "question": "From which year Amazon changed the estimate of the useful lives for their servers? A)2022 B)2024 C)1998 D)2036",
+    "ground_truth": "B)2024",
+    "answer_received": "B)2024",
+    "cosine_similarity": 1.0,
+    "semantic_f1": 1.0
+  },
+  "test_105": {
+    "question": "How much did Amazon invest in Anthropic's convertible notes during Q1 2024? a) $1.25 billion, b) $2.75 billion, c) $4.00 billion, d) $525 million",
+    "ground_truth": "b) $2.75 billion",
+    "answer_received": "b) $2.75 billion",
+    "cosine_similarity": 1.0,
+    "semantic_f1": 1.0
+  },
+  "test_106": {
+    "question": "Which country's tax authority is disputing cloud services fees with Amazon? i)Luxembourg ii) India iii) United Kingdom iv) Germany",
+    "ground_truth": "ii) India",
+    "answer_received": "ii) India",
+    "cosine_similarity": 1.0,
+    "semantic_f1": 1.0
+  },
+  "test_107": {
+    "question": "How many shares of Rivian's Class A common stock did Amazon hold as of September 2024? a. 100 million b. 158 million c. 200 million d. Not disclosed",
+    "ground_truth": "158 million",
+    "answer_received": "b",
+    "cosine_similarity": 0.1982,
+    "semantic_f1": 0.0
+  },
+  "test_108": {
+    "question": "Which patent case involved Amazon's DynamoDB service? a) Nokia Technologies v. Amazon b) Dialect v. Amazon c) Kove IO v. AWS d) Broadband ITV v. Amazon e) All",
+    "ground_truth": "Kove IO v. AWS",
+    "answer_received": "c) Kove IO v. AWS",
+    "cosine_similarity": 0.903,
+    "semantic_f1": 0.8889
+  },
+  "test_109": {
+    "question": "What was the total unrecognized stock-based compensation cost as of September 2024? a)$5.333 billion b)$17.016 billion c)$18.900 billion d)$25.971 billion",
+    "ground_truth": "c) $18.9 billion",
+    "answer_received": "The correct answer is c) $18.900 billion.",
+    "cosine_similarity": 0.9215,
+    "semantic_f1": 0.6
+  },
+  "test_110": {
+    "question": "Which company filed patent infringement claims against Amazon's Alexa products? a) Anthropic b) Dialect c) Kove IO d) Nokia",
+    "ground_truth": "b) Dialect",
+    "answer_received": "b) Dialect",
+    "cosine_similarity": 1.0,
+    "semantic_f1": 1.0
+  },
+  "test_111": {
+    "question": "What was the amount of Amazon's long-term debt as of September 30, 2024? a) $54.890 billion b) $58.314 billion c) 60.500 billion IO d) 67.182 billion",
+    "ground_truth": "$54.890 billion",
+    "answer_received": "a) $54.890 billion",
+    "cosine_similarity": 0.8352,
+    "semantic_f1": 0.8
+  },
+  "test_112": {
+    "question": "Summarize Amazon's legal proceedings regarding the Kove IO patent case",
+    "ground_truth": "In April 2024, Amazon was found to infringe Kove IO's patents and ordered to pay $525M damages plus $148M pre-judgment interest. Amazon is appealing the decision.",
+    "answer_received": "According to the context, Amazon is involved in a legal proceeding with Kove IO, Inc. regarding patent infringement. Here's a summary:\n\n* In December 2018, Kove IO filed a complaint against Amazon Web Services, Inc. in the United States District Court for the Northern District of Illinois, alleging that Amazon S3 and DynamoDB infringe U.S. Patent Nos. 7,814,170, 7,103,640, and 7,233,978.\n* In April 2024, a jury found that Amazon infringed the asserted patents and awarded Kove $525 million in damages.\n* In August 2024, the court awarded Kove $148 million in pre-judgment interest.\n* In September 2024, Amazon filed a notice of appeal, disagreeing with the jury's findings and intending to defend themselves vigorously in this matter.",
+    "cosine_similarity": 0.8839,
+    "semantic_f1": 0.5647
+  },
+  "test_113": {
+    "question": "Explain Amazon's risk factors related to international operations",
+    "ground_truth": "Key risks include: (1) Regulatory restrictions (e.g., India's e-commerce rules) (2) Tax disputes (Luxembourg/India) (3) Currency fluctuations (4) Geopolitical instability (5) Compliance with foreign laws like FCPA",
+    "answer_received": "Amazon's international operations expose the company to various risks, including:\n\n* Local economic and political conditions\n* Government regulation and restrictive actions\n* Uncertainty regarding liability for products and services\n* Business licensing and certification requirements\n* Limitations on fund repatriation and investment\n* Limited fulfillment and technology infrastructure\n* Negative impact on cash flow due to shorter payable and longer receivable cycles\n* Laws and regulations regarding privacy, data use, and consumer protection\n* Lower levels of internet use, consumer spending, and credit card usage\n* Difficulty in staffing and managing foreign operations due to distance, language, and cultural differences\n* Compliance with anti-corruption laws.",
+    "cosine_similarity": 0.5399,
+    "semantic_f1": 0.1537
+  },
+  "test_114": {
+    "question": "Explain Amazon's change in server depreciation policy and its financial impact",
+    "ground_truth": "Extended server useful lives from 5 to 6 years in January 2024, reducing YTD depreciation by $2.4B and increasing net income by $1.9B ($0.18 EPS impact). Q3 2024 saw $760M lower depreciation.",
+    "answer_received": "Amazon changed its estimate of the useful life of servers from 5 to 6 years effective January 1, 2024, due to continuous improvements in hardware, software, and data center designs. This change resulted in a reduction in depreciation and amortization expense of $760 million and a benefit to net income of $598 million for Q3 2024. For the nine months ended September 30, 2024, the reduction in depreciation and amortization expense was $2.4 billion, and the benefit to net income was $1.9 billion. \n\nLater, effective January 1, 2025, Amazon changed the useful life of a subset of servers and networking equipment from 6 years to 5 years due to the increased pace of technology development, particularly in artificial intelligence and machine learning. This change resulted in an increase in depreciation and amortization expense of $217 million and a reduction in net income of $162 million for Q1 2025.",
+    "cosine_similarity": 0.523,
+    "semantic_f1": 0.5555
+  },
+  "test_115": {
+    "question": "Summarize the key components of Amazon's $5B credit agreement",
+    "ground_truth": "364-day $5B unsecured revolving facility with 0.45% SOFR spread and 0.03% commitment fee. No financial covenants. May be extended for 364 days with lender approval. Replaces prior 2023 agreement.",
+    "answer_received": "The key components of Amazon's $5B credit agreement (2024 Short-Term Credit Agreement) are:\n\n* Unsecured revolving credit facility with a borrowing capacity of up to $5.0 billion\n* Term of 364 days, extendable for an additional 364 days subject to lender approval\n* Interest rate: applicable benchmark rate + 0.45%\n* Commitment fee: 0.03% on undrawn portion\n* No financial covenants\n* Can be used for general corporate purposes, including backstopping commercial paper program",
+    "cosine_similarity": 0.4286,
+    "semantic_f1": 0.4675
+  },
+  "test_116": {
+    "question": "Give an overview of the Kove IO patent litigation status",
+    "ground_truth": "April 2024: Jury found infringement, awarded $525M damages. August 2024: $148M pre-judgment interest added. September 2024: Amazon filed appeal. Disputes findings but continues defense.",
+    "answer_received": "According to the context, Kove IO, Inc. filed a complaint against Amazon Web Services, Inc. in December 2018, alleging that Amazon S3 and DynamoDB infringe on certain patents. In April 2024, a jury found that Amazon infringed the asserted patents and awarded Kove $525 million in damages. In August 2024, the court awarded Kove an additional $148 million in pre-judgment interest. Amazon has filed a notice of appeal in September 2024, disagreeing with the jury's findings and intending to defend themselves vigorously in this matter.",
+    "cosine_similarity": 0.6937,
+    "semantic_f1": 0.4103
+  },
+  "test_117": {
+    "question": "Summarize Amazon's stock repurchase program status",
+    "ground_truth": "$10B authorization (March 2022), no repurchases in 2023-2024. $6.1B remaining as of Sep 2024. No fixed expiration date.",
+    "answer_received": "Amazon's stock repurchase program was authorized in March 2022 to repurchase up to $10.0 billion of common stock with no fixed expiration. As of December 31, 2024, and March 31, 2025, $6.1 billion remains under the repurchase program. In 2022, 46.2 million shares were repurchased for $6.0 billion. There were no repurchases in 2023 or 2024.",
+    "cosine_similarity": 0.6058,
+    "semantic_f1": 0.5815
+  },
+  "test_118": {
+    "question": "Overview of the Federal Trade Commission's antitrust lawsuit allegations on Amazon",
+    "ground_truth": "Alleges Amazon monopolizes online superstores via anticompetitive practices: pricing policies, Prime structure, self-preferencing. Seeks injunctive relief, structural changes, and unspecified damages.",
+    "answer_received": "The Federal Trade Commission (FTC) and several state Attorneys General filed a lawsuit in September 2023 in the Western District of Washington, alleging that Amazon has a monopoly in markets for online superstores and marketplace services, and unlawfully maintains those monopolies through anticompetitive practices related to pricing policies, advertising practices, the structure of Prime, and promotion of Amazon's own products on its website. The complaint seeks injunctive and structural relief, an unspecified amount of damages, and costs.",
+    "cosine_similarity": 0.7272,
+    "semantic_f1": 0.4501
+  },
+  "test_119": {
+    "question": "Summarize Amazon's Rivian investment valuation changes",
+    "ground_truth": "Holds 158M shares (16% stake). Fair value dropped from $3.7B (Dec 2023) to $1.8B (Sep 2024). Recorded $1.8B valuation loss YTD 2024.",
+    "answer_received": "According to the context, Amazon's Rivian investment valuation changes are as follows:\n\n* 2022: $(12.7) billion loss\n* 2023: $797 million gain\n* 2024: $(1.6) billion loss\n* As of December 31, 2023: $3.7 billion fair value\n* As of December 31, 2024: $2.1 billion fair value\n* Q3 2023: $1.2 billion gain\n* Q3 2024: $(348) million loss\n* Nine months ended September 30, 2023: $926 million gain\n* Nine months ended September 30, 2024: $(1.9) billion loss",
+    "cosine_similarity": 0.5082,
+    "semantic_f1": 0.3471
+  },
+  "test_120": {
+    "question": "Describe Amazon's antitrust litigation landscape",
+    "ground_truth": "Facing 5+ major cases: FTC (monopolization), state AGs (pricing), private suits. Some claims dismissed but core allegations proceed. Potential for billions in damages.",
+    "answer_received": "According to the context, Amazon is facing multiple antitrust lawsuits in the US and Canada, including:\n\n* Private litigants' cases filed in 2020, alleging price fixing, monopolization, and consumer protection claims.\n* Suits brought by Attorneys General of the District of Columbia and California in 2021 and 2022, respectively, with similar allegations.\n* A lawsuit filed by the Federal Trade Commission and state Attorneys General in 2023, alleging violations of federal antitrust and state antitrust and consumer protection laws, including monopolization in online superstores and marketplace services.\n* A complaint filed by the Attorney General of Arizona in 2024, alleging unlawful practices related to pricing and Featured Offers.\n\nThese lawsuits seek various forms of relief, including damages, treble damages, punitive damages, injunctive relief, civil penalties, attorneys' fees, and costs.",
+    "cosine_similarity": 0.5475,
+    "semantic_f1": 0.2342
+  },
+  "test_121": {
+    "question": "Summarize Amazon's capital expenditure drivers",
+    "ground_truth": "2024 CapEx expected to rise significantly. Primarily for AWS infrastructure (55%) and fulfillment capacity (35%). YTD 2024: $51.6B vs $34.8B 2023.",
+    "answer_received": "According to the context, Amazon's capital expenditure drivers are primarily investments in technology infrastructure (majority of which is to support AWS business growth) and in additional capacity to support their fulfillment network.",
+    "cosine_similarity": 0.465,
+    "semantic_f1": 0.3051
+  },
+  "test_122": {
+    "question": "Summarize Amazon's foreign exchange risk exposure",
+    "ground_truth": "$19.5B foreign currency balances. 5% adverse FX move = $975M loss. Intercompany balances: 5% move = $285M impact. Hedging activities not specified.",
+    "answer_received": "Amazon's foreign exchange risk exposure arises from:\n\n1. International operations: Net sales and related expenses from internationally-focused stores are exposed to foreign exchange rate fluctuations, which may affect operating results.\n2. Foreign-denominated cash, cash equivalents, and marketable securities: A 5%, 10%, or 20% adverse change in foreign exchange rates could result in declines of $930 million, $1.9 billion, or $3.7 billion, respectively, as of March 31, 2025.\n3. Intercompany balances: A 5%, 10%, or 20% adverse change in foreign exchange rates could result in losses of $315 million, $630 million, or $1.3 billion, respectively, as of March 31, 2025, recorded to 'Other income (expense), net.'",
+    "cosine_similarity": 0.5911,
+    "semantic_f1": 0.2051
+  },
+  "test_123": {
+    "question": "Provide Summarization of Amazon's Anthropic investments",
+    "ground_truth": "Invested $4B total ($1.25B Q3 2023 + $2.75B Q1 2024) in convertible notes. Classified as Level 3 assets. Includes AWS cloud services commercial arrangement.",
+    "answer_received": "Amazon invested $1.25 billion in a convertible note from Anthropic, PBC in Q3 2023, $2.75 billion in a second convertible note in Q1 2024, and $1.3 billion in a third convertible note in Q4 2024. Additionally, Amazon will invest an additional $2.7 billion by Q4 2025.",
+    "cosine_similarity": 0.7362,
+    "semantic_f1": 0.5062
+  },
+  "test_124": {
+    "question": "Summarize Amazon's liquidity position",
+    "ground_truth": "$88.1B cash/marketable securities. $112.7B TTM operating cash flow. $15B revolving credit facility (untapped). Believes sufficient for 12+ month needs.",
+    "answer_received": "Amazon's principal sources of liquidity are cash flows generated from operations and cash, cash equivalents, and marketable securities balances. As of December 31, 2023, and September 30, 2024, these balances were $86.8 billion and $88.1 billion, respectively. As of December 31, 2024, and March 31, 2025, these balances were $101.2 billion and $94.6 billion, respectively.",
+    "cosine_similarity": 0.393,
+    "semantic_f1": 0.2308
+  },
+  "test_125": {
+    "question": "Give an overview of Amazon's operational segements",
+    "ground_truth": "We have organized our operations into three segments: North America, International, and AWS.",
+    "answer_received": "Amazon has organized its operations into three segments: North America, International, and Amazon Web Services (AWS).",
+    "cosine_similarity": 0.8059,
+    "semantic_f1": 0.7586
+  },
+  "test_126": {
+    "question": "Difference between Amazon's cash position between December 31, 2023 and September 30, 2024",
+    "ground_truth": "Cash increased from $73.387B to $75.091B.",
+    "answer_received": "$75,091 - $73,387 = $1,704.",
+    "cosine_similarity": 0.5731,
+    "semantic_f1": 0.3636
+  },
+  "test_127": {
+    "question": "Rank the Amazon's net sales between product and service sales in Q3 2024",
+    "ground_truth": "Product sales: $67.601B, Service sales: $91.276B. Service sales grew faster than products sale.",
+    "answer_received": "In Q3 2024, Net product sales = $67,601 and Net service sales = $91,276. Therefore, service sales rank higher than product sales.",
+    "cosine_similarity": 0.7094,
+    "semantic_f1": 0.6286
+  },
+  "test_128": {
+    "question": "Compare Amazon's cash provided by operating activities versus cash used in investing activities for the nine months ended September 30, 2024.",
+    "ground_truth": "Operating activities provided $70,241 million while investing activities used $(56,899) million.",
+    "answer_received": "The correct answer is:\n\nCash provided by operating activities ($70,241) is greater than cash used in investing activities ($56,899) for the nine months ended September 30, 2024.",
+    "cosine_similarity": 0.6818,
+    "semantic_f1": 0.4211
+  },
+  "test_129": {
+    "question": "Compare the fair value of Amazon's Rivian investment between December 31, 2023 and September 30, 2024.",
+    "ground_truth": "Decreased from $3.7B to $1.8B, reflecting a $1.9B decline (51% reduction)",
+    "answer_received": "The fair value of Amazon's Rivian investment was $3.7 billion as of December 31, 2023, and $1.8 billion as of September 30, 2024. Therefore, the answer is:\n\nThe fair value decreased by $1.9 billion.",
+    "cosine_similarity": 0.3448,
+    "semantic_f1": 0.1869
+  },
+  "test_130": {
+    "question": "Compare the composition of Amazon's net sales between product and service sales for Q3 2023 versus Q3 2024.",
+    "ground_truth": "Amazon's net product sales increased from $63,171 million in Q3 2023 to $67,601 million in Q3 2024. Net service sales increased from $79,912 million in Q3 2023 to $91,276 million in Q3 2024.",
+    "answer_received": "I don't know. The context does not provide a direct comparison of the composition of Amazon's net sales between product and service sales for Q3 2023 versus Q3 2024.",
+    "cosine_similarity": 0.7414,
+    "semantic_f1": 0.3922
+  },
+  "test_131": {
+    "question": "What is difference of the inventory valuation allowance between 2023 and 2024.",
+    "ground_truth": "Decreased from $3.0B to $2.7B",
+    "answer_received": "The correct answer is: None of the above.\n\nAccording to the context, the inventory valuation allowance was $3.0 billion as of December 31, 2023 and 2024. There is no difference between the two years.",
+    "cosine_similarity": 0.3284,
+    "semantic_f1": 0.1026
+  },
+  "test_132": {
+    "question": "Compare the outcomes of the Kove IO patent case damages award versus the Broadband ITV patent case.",
+    "ground_truth": "Kove IO: $525M damages + $148M interest (ongoing appeal); Broadband ITV: Patents held invalid (case dismissed)",
+    "answer_received": "Kove IO: $525 million in damages + $148 million in pre-judgment interest = $673 million\nBroadband iTV: No damages awarded, as the patents were deemed invalid.",
+    "cosine_similarity": 0.8942,
+    "semantic_f1": 0.5523
+  },
+  "test_133": {
+    "question": "Compare the outcomes of the DC Attorney General lawsuit versus California AG lawsuit as of September 2024.",
+    "ground_truth": "DC case: Overturned dismissal (proceeding); CA case: Partial dismissal (pricing claims dismissed)",
+    "answer_received": "b. The DC Attorney General lawsuit was overturned and is now proceeding, while the California AG lawsuit was partially granted and partially denied.",
+    "cosine_similarity": 0.6793,
+    "semantic_f1": 0.3209
+  },
+  "summary": {
+    "average_semantic_f1": 0.3342,
+    "total_tests": 134
+  }
+}

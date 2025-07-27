@@ -2,6 +2,7 @@ from pathlib import Path
 from typing import List, Union, Optional
 from transformers import GenerationConfig
 from baseline.retriever import Retriever
+from specialization.generator_groq import GeneratorGroq
 from specialization.retriever_speci import RetrieverSpeci
 from baseline.generator import Generator
 import json
@@ -24,6 +25,8 @@ class LogEntry:
     """
     question: str
     retrieved_chunks: List[str]
+    retrieved_chunks_pages: Optional[List[str]]
+    retrieved_chunks_source: Optional[List[str]]
     prompt: str
     generated_answer: str
     timestamp: str
@@ -46,14 +49,19 @@ class PipelineSpeci:
 
        Raises:
            ValueError: If `rebuild_index` is True but no document_paths are provided.
+
+       Example Usage:
+            pipeline = PipelineSpeci(doc_path="data/findocs", index_save_path="./index"...)
+
        """
     def __init__(
             self,
             document_paths: Optional[List[Union[str, Path]]] = None,
             index_save_path: Union[str, Path] = "./vector_index_speci",
             chunk_size: int = 200,
-            generator_model: str = "google/flan-t5-base",
-            retriever_model: str = "sentence-transformers/all-MiniLM-L6-v2",
+            groq_model: bool = True,
+            generator_model: Optional[str] = None,
+            retriever_model: str = "sentence-transformers/all-mpnet-base-v2",
             generation_config: Optional[GenerationConfig] = None,
             log_path: Union[str, Path] = "rag_logs_spec.jsonl",
             rebuild_index: bool = False
@@ -61,9 +69,20 @@ class PipelineSpeci:
         self.document_paths = document_paths
         self.index_save_path = index_save_path
         self.retriever = RetrieverSpeci(model_name=retriever_model)
-        self.generator = Generator(model_name=generator_model, generation_config=generation_config)
+        if generator_model is None:
+            if groq_model:
+                generator_model = "llama3-70b-8192"  # Default for Groq
+            else:
+                generator_model = "google/flan-t5-base"  # Default for standard
+            print(
+                f"Info: No generator_model provided. Defaulting to '{generator_model}'.")
+
+        #self.generator = Generator(model_name=generator_model, generation_config=generation_config)
+        self.generator = GeneratorGroq(model_name=generator_model) if groq_model else Generator(
+            model_name=generator_model, generation_config=generation_config)
         self.log_path = Path(log_path)
         self.log_path.parent.mkdir(parents=True, exist_ok=True)
+
 
         if rebuild_index:
             if not document_paths:
@@ -84,7 +103,7 @@ class PipelineSpeci:
         with open(self.log_path, "a", encoding="utf-8") as f:
             f.write(json.dumps(entry) + "\n")
 
-    def query(self, question: str, k: int = 3) -> str:
+    def query(self, question: str, k: int = 5) -> str:
         """
         Runs an end-to-end RAG query: retrieve context, generate answer, and log results.
 
@@ -97,15 +116,17 @@ class PipelineSpeci:
         """
        # if not self._index_loaded:
         #    raise ValueError("Load documents first using index_documents()")
-        contexts = self.retriever.query(question, k)
-        print("=>Retrieved contexts:")
-        print(contexts)
-        answer, prompt = self.generator.generate_answer(question, contexts)
-
+        retrieved_results = self.retriever.query(question, k)
+        print(f"Question:{question}")
+        print(f"from pipeline_speci, retrieved: {retrieved_results.chunk_text}")
+        answer, prompt = self.generator.generate_answer(question, retrieved_results.chunk_text)
+        print(f"Answer:{answer}")
         # Create log entry
         log_entry = LogEntry(
             question=question,
-            retrieved_chunks=contexts,
+            retrieved_chunks=retrieved_results.chunk_text,
+            retrieved_chunks_pages=retrieved_results.pages,
+            retrieved_chunks_source=retrieved_results.source,
             prompt=prompt,
             generated_answer=answer,
             timestamp=datetime.now().isoformat(),
