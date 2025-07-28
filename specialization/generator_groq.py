@@ -9,7 +9,7 @@ import os
 class GeneratorGroq:
     def __init__(self, model_name="llama3-70b-8192"):
         self.model_name = model_name
-        self.client = OpenAI(api_key=os.getenv("GROQ_API_KEY") or "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")
+        self.client = OpenAI(api_key=os.getenv("GROQ_API_KEY") or "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")
         self.client.base_url = "https://api.groq.com/openai/v1"
 
     def generate_answer(self, question, contexts):

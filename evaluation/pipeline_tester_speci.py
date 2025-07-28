@@ -133,6 +133,9 @@ class PipelineTesterSpeci:
                 "ground_truth": ground_truth,
                 "answer_received": answer,
                 "context": contexts.chunk_text,
+                "source_type": test["source_type"],
+                "difficulty": test["difficulty"],
+                "question_type": test["question_type"],
         #       "grounding_check": self._check_grounding(answer, contexts),
                 "cosine_similarity": round(sim_score, 4),
                 "semantic_f1": round(sem_f1, 4)
