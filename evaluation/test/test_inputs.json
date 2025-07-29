@@ -1,0 +1,35 @@
+[
+   {
+        "question":  "When was the QuantumLink v2.0 launched?",
+        "expected_answer": "March 15"
+    },
+    {
+        "question": "Disk space required to install visual studio",
+        "expected_answer": "250 MB"
+    },
+    {
+        "question": "How many mb of space required to install visual studio",
+        "expected_answer": "250 MB"
+    },
+    {
+        "question": "What are the system requirements for development tools?",
+        "expected_answer": ""
+    },
+
+   {
+        "question": "How many new customer got acquired in Q1 2025?",
+        "expected_answer": "3,500"
+    },
+    {
+        "question": "Summarize the steps of Installing visual studio.",
+        "expected_answer": ""
+    },
+    {
+        "question": "Explain quantum computing",
+        "expected_answer": ""
+    },
+    {
+        "question": "How many mb of space required to install visual studio? a) 350 MB b) 300 MB c) 250 MB d) 1 TB?",
+        "expected_answer": "250 MB"
+    }
+]

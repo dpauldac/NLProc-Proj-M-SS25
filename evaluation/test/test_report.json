@@ -1,0 +1,58 @@
+{
+  "test_0": {
+    "question": "When was the QuantumLink v2.0 launched?",
+    "expected_test_answer": "March 15",
+    "answer_received": "         ",
+    "answer_valid": false,
+    "grounding_check": false
+  },
+  "test_1": {
+    "question": "Disk space required to install visual studio",
+    "expected_test_answer": "250 MB",
+    "answer_received": "Download the Visual Studio Code (VS Code) installer.",
+    "answer_valid": true,
+    "grounding_check": true
+  },
+  "test_2": {
+    "question": "How many mb of space required to install visual studio",
+    "expected_test_answer": "250 MB",
+    "answer_received": "- # README: Installing Visual Studio Code This guide provides instructions on how to install",
+    "answer_valid": true,
+    "grounding_check": true
+  },
+  "test_3": {
+    "question": "What are the system requirements for development tools?",
+    "expected_test_answer": "",
+    "answer_received": "## Prerequisites * **Operating System:** * Windows 10 or 11 (64",
+    "answer_valid": true,
+    "grounding_check": true
+  },
+  "test_4": {
+    "question": "How many new customer got acquired in Q1 2025?",
+    "expected_test_answer": "3,500",
+    "answer_received": "- 024.",
+    "answer_valid": true,
+    "grounding_check": true
+  },
+  "test_5": {
+    "question": "Summarize the steps of Installing visual studio.",
+    "expected_test_answer": "",
+    "answer_received": "- # README: Installing Visual Studio Code This guide provides instructions on how to install",
+    "answer_valid": true,
+    "grounding_check": true
+  },
+  "test_6": {
+    "question": "Explain quantum computing",
+    "expected_test_answer": "",
+    "answer_received": "Explain the main points of the article.",
+    "answer_valid": true,
+    "grounding_check": false
+  },
+  "test_7": {
+    "question": "How many mb of space required to install visual studio? a) 350 MB b) 300 MB c) 250 MB d) 1 TB?",
+    "expected_test_answer": "250 MB",
+    "answer_received": "a",
+    "answer_valid": true,
+    "grounding_check": true
+  }
+}
