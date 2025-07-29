@@ -10,7 +10,7 @@ This project implements a domain-specific Retrieval-Augmented Generation (RAG) p
   - `test/`: contains testcase input files and generated report with evaluation having summary at the end.
   - `evaluation_result/`: contains detailed evaluation result with more metrics scores.
 - `utils/`: Helper functions shared across code.
-- `data/`: Contains the data, mostly document files. The current specialization uses findoc_xsm_samples containing 3 Apple and 3 Amazon SEC filling pdf.
+- `data/`: Contains the data, mostly document files. The current specialization uses data from `findoc_xsm_samples` containing 3 Apple and 3 Amazon SEC filling pdf.
 - `homeworks/`: Contains all the homework independently. Files from this are also being incorporated in the baseline structure.
 - `special note`: Any file ending with `_speci.py` indicate this file is dedicated for specialization use case.
 
