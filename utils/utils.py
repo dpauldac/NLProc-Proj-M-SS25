@@ -8,6 +8,37 @@ from pathlib import Path
 import os
 import pymupdf  # For PDF handling (pip install pymupdf)
 
+def get_doc_paths(directory_path):
+    """
+    Returns a list of full paths to all files in a given directory.
+
+    This function iterates through all entries in the specified directory and
+    filters out any subdirectories, returning only the full paths of the files.
+    If the provided path is not a valid directory, an empty list is returned.
+
+    Args:
+        directory_path (str): The path to the directory to scan.
+
+    Returns:
+        list: A list of strings, where each string is the full path to a file.
+              Returns an empty list if the directory_path is not a valid directory
+              or contains no files.
+    """
+    # Check if the provided path is a valid directory
+    if not os.path.isdir(directory_path):
+        # You could also print an error message here for better debuggin
+        return []
+
+    # Use a list comprehension to build the list of full file paths
+
+    doc_path_list = [
+        os.path.join(directory_path, f)
+        for f in os.listdir(directory_path)
+        if os.path.isfile(os.path.join(directory_path, f))
+    ]
+
+    return doc_path_list
+
 def read_file(file_path: Union[str, Path], max_pages: int = None) -> str:
   path = Path(file_path)
 
@@ -254,4 +285,3 @@ def chunk_text_recursive_character(text: str, chunk_size: int, overlap_size: int
 
     _split_recursively(text, separators)
     return final_chunks
-

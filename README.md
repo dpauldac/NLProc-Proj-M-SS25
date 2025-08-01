@@ -41,6 +41,23 @@ pip install -r requirements.txt
 > **Note for Windows users**:  
 > If you encounter errors while installing `spaCy` or transformer-based spaCy model `en-core-web-trf`, you may need to install [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
 
+**Step 4**: Environment variable setup to use GROQ api and llama3 model.
+  * Create a `.env` file(no filename, just .env) in the root directory of the project (`NLProc-Proj-M-SS25`)
+  * Add your GROQ API key to the file like this:
+    * `GROQ_API_KEY=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`
+      > **Note**: The above key is a placeholder. You should [get a new API key from the GROQ Console](https://console.groq.com/keys).
+    
+**Step 5**: Run the project
+  *  In terminal, assuming the project is in root directory of the project (`NLProc-Proj-M-SS25`), then navigate into the evaluation folder.
+      ```bash
+        D:...\NLProc-Proj-M-SS25>cd evaluation
+      ```
+  * Finally, run the evaluation script: 
+    ```bash
+    py -m evaluation
+    ```
+    > **Note**: Depending on your environment, use `python` or `python3` instead of `py.
+
 ## Description
 Domain-specific Retrieval-Augmented Generation (RAG) pipeline for question answering on financial documents. It combines hybrid retrieval (BM25 + FAISS), layout-aware chunking, reranking, and task-specific prompting to enhance answer accuracy and factual grounding. Evaluated on diverse financial QA datasets with multiple metrics.
 
@@ -109,6 +126,24 @@ Domain-specific Retrieval-Augmented Generation (RAG) pipeline for question answe
 ```
     - The retriever failed to prioritize the keyword "announce", retrieving nearby but unrelated chunks instead, where only "products", "services", "second quarter of 2024" were mentioned.
     - Emphasizes the need for word-level importance, especially for verbs tied to events or facts.
+
+#### MCQ question
+``` json
+  {
+    "question": "Which one is Apple's own operating systems? a)Android OS, b)iOS c)Windows OS, d)Wear OS",
+    "ground_truth": "b)iOS",
+    "answer_received": "b)",
+    "actual_context_sentence": "iPhone: iPhone is the Company’s line of smartphones based on its iOS operating system. The iPhone line includes iPhone 16 Pro, iPhone 16, iPhone 15, iPhone 14 and iPhone SE . Mac: Mac is the Company’s line of personal computers based on its macOS operating system. The Mac line includes laptops MacBook Air and MacBook Pro , as well as desktops iMac , Mac mini , Mac Studio and Mac Pro. iPad: iPad is the Company’s line of multipurpose tablets based on its iPadOS operating system. The iPad line includes iPad Pro , iPad Air , iPad and iPad mini.  Wearables, Home and Accessories: Wearables includes smartwatches, wireless headphones and spatial computers. The Company’s line of smartwatches, based on its watchOS operating system, includes Apple Watch Ultra 2, Apple Watch Series 10 and Apple Watch SE . The Company’s line of wireless headphones includes AirPods , AirPods Pro , AirPods Max and Beats products. Apple Vision Pro™ is the Company’s first spatial computer based on its visionOS operating system. Home includes Apple TV , the Company’s media streaming and gaming device based on its tvOS operating system, and HomePod and HomePod mini , high-fidelity wireless smart speakers.",
+    "source_type": "text",
+    "difficulty": "easy",
+    "question_type": "mcq",
+    "f1": 0.0,
+    "rouge_l": 0.667,
+    "bert_f1": 0.74
+   },
+```
+    - Context was correctly retrieved and matched.
+    - f1 is so low! During evaluation, the normalization used, which strips the punctuation such as ")", could be the reason behind this fall.
 
 ## Teams & Tracks
 **Group**: `@Team Oneironauts`

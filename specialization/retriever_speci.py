@@ -3,7 +3,6 @@ from typing import List, Union, Any
 from pathlib import Path
 import os
 import faiss
-import fitz  # For PDF handling (pip install pymupdf)
 import nltk
 import numpy as np
 from nltk.corpus import stopwords
@@ -94,7 +93,7 @@ class RetrieverSpeci:
         and then chunks them.
 
         Args:
-            directory_path (str): The path to the directory containing the documents.
+            directory_path (str, Path): The path to the directory containing the documents.
             max_tokens (int): The maximum number of tokens per chunk.
         """
         result = self.converter.convert(doc_path)
@@ -193,6 +192,19 @@ class RetrieverSpeci:
             }
 
     def _retrieve_bm25(self, query: str, candidate_size: int):
+        """
+           Retrieve candidate text chunks using BM25 sparse retrieval.
+
+           Args:
+               query (str): The search query string.
+               candidate_size (int): Number of top candidates to return.
+
+           Returns:
+               Tuple[List[dict], List[float], List[int]]:
+                   - List of result dictionaries containing chunk text, source, pages, and BM25 score.
+                   - List of BM25 scores corresponding to all chunks.
+                   - List of indices of top-ranked chunks based on BM25 scores.
+        """
         if not self.bm25_index:
             return [], []
         query_tokens = self.bm25_tokenizer(query)
@@ -210,6 +222,21 @@ class RetrieverSpeci:
         return results, scores, indices
 
     def _retrieve_faiss(self, query: str, candidate_size: int):
+        """
+        Retrieve candidate text chunks using FAISS dense vector similarity search.
+
+        Args:
+            query (str): The search query string.
+            candidate_size (int): Number of top candidates to return.
+
+        Returns:
+            Tuple[List[dict], List[float], List[int]]:
+                - List of result dictionaries containing chunk text, source, pages, and FAISS similarity score.
+                - List of FAISS similarity scores for the top candidates.
+                - List of indices of the top retrieved chunks from the FAISS index.
+        """
+        if not self.index:
+            return [], []
         query_embedding = self.model.encode([query], convert_to_numpy=True).astype('float32')
         # Normalize query embedding
         faiss.normalize_L2(query_embedding)
@@ -228,19 +255,20 @@ class RetrieverSpeci:
 
     def query(self, query: str, k: int = 5, candidate_size: int = 5) -> list[Any] | RetrievalResults:
         """
-        Retrieve the top-k most semantically similar chunks to the query.
+        Perform hybrid retrieval to find top-k relevant chunks using FAISS, BM25, and cross-encoder reranking.
 
         Args:
-            query (str): The input search query text.
-            k (int): Number of top results to return. (default=3)
+            query (str): The user’s search query.
+            k (int): Number of top final results to return after reranking. Default is 5.
+            candidate_size (int): Number of top candidates to retrieve from each method (BM25/FAISS) before reranking.
+
         Returns:
-            List[str]: List of top-k relevant text chunks, ordered by similarity
-            :param candidate_size:
+            RetrievalResults: Top-k reranked results with metadata (chunk text, source, pages, score).
         """
         if not self.index:
             return []
 
-        if candidate_size is None or candidate_size <= k:
+        if candidate_size is None or candidate_size <= k/2:
             candidate_size = k
 
         # Stage 1: Independent Retrieval
@@ -254,6 +282,8 @@ class RetrieverSpeci:
         # Combine candidates (remove duplicates?)
         combined_results = results_bm25 + results_faiss
 
+        print(combined_results)
+        print(f"combined results: {combined_results}")
         # Combine candidates and deduplicate by chunk_text (or use source + pages if needed)
         combined_dict = {}
         for r in combined_results:
@@ -262,7 +292,7 @@ class RetrieverSpeci:
                 combined_dict[key] = r
 
         candidates_unique = list(combined_dict.values())
-
+        print(f"Candidate uniqe: {candidates_unique}")
         # ______Optional step: Reranking___
         if not candidates_unique:
             return RetrievalResults([])
@@ -280,7 +310,7 @@ class RetrieverSpeci:
         # Stage 5: Sort by rerank score descending
         candidates_unique.sort(key=lambda x: x["score"], reverse=True)
         #  ______Optional step end___
-
+        print(candidates_unique[:k])
         return RetrievalResults(candidates_unique[:k])
 
 #        emb = self.model.encode([query], convert_to_numpy=True).astype('float32')
@@ -333,6 +363,22 @@ class RetrieverSpeci:
         Args:
             dir_path (Union[str, Path]): Directory path to load the index and metadata from.
         """
+        dir_path = Path(dir_path)
+        # Check if the directory path exists and is a directory
+        if not os.path.isdir(dir_path):
+            raise FileNotFoundError(f"The directory '{dir_path}' does not exist.")
+
+        faiss_path = os.path.join(dir_path, "faiss.index")
+        bm25_path = os.path.join(dir_path, "bm25_index.pkl")
+        meta_path = os.path.join(dir_path, "chunks_with_metadata.pkl")
+
+        if not os.path.exists(faiss_path):
+            raise FileNotFoundError("faiss.index file not found.")
+        if not os.path.exists(bm25_path):
+            raise FileNotFoundError("bm25_index.pkl file not found.")
+        if not os.path.exists(meta_path):
+            raise FileNotFoundError("chunks_with_metadata.pkl file not found.")
+
         self.index = faiss.read_index(os.path.join(dir_path, "faiss.index"))
 
         # load BM25 index using pickle
@@ -342,3 +388,5 @@ class RetrieverSpeci:
         # load chunks_with_metadata once for both FAISS and BM25
         with open(os.path.join(dir_path, "chunks_with_metadata.pkl"), "rb") as f:
             self.id_to_chunk = pickle.load(f)
+
+        print(f"___...___\n[RetrieverSpeci]\nSuccessfully loaded FAISS and BM25 indexes from {dir_path}.\nFAISS index: {self.index }\nBM25 index: {self.bm25_index}\n___...___")

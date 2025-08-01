@@ -73,6 +73,7 @@ class Pipeline:
        # if not self._index_loaded:
         #    raise ValueError("Load documents first using index_documents()")
         retrieved_results = self.retriever.query(question, k)
+        print(retrieved_results)
         answer, prompt = self.generator.generate_answer(question, retrieved_results.chunk_text)
 
         # Create log entry
