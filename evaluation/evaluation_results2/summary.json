@@ -1,9 +1,0 @@
-{
-    "average_precision": 0.237,
-    "average_recall": 0.608,
-    "average_f1": 0.295,
-    "average_rouge": 0.211,
-    "average_bert_f1": 0.617,
-    "matched": 60,
-    "unmatched": 74
-}
