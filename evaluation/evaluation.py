@@ -1,5 +1,7 @@
 #implement your evaluation code here
-import os
+import os, sys
+# Add the project root directory to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import json
 from datetime import datetime
 from difflib import SequenceMatcher
@@ -19,8 +21,6 @@ from baseline.pipeline import Pipeline
 from specialization import PipelineSpeci
 from utils import *
 from utils.utils import get_doc_paths
-
-model = SentenceTransformer("all-MiniLM-L6-v2")
 
 
 class Evaluation:
@@ -145,7 +145,7 @@ class Evaluation:
         Returns:
             float: Cosine similarity score (0 to 1).
         """
-        embeddings = model.encode([expected, actual], convert_to_tensor=True)
+        embeddings = self.embd_model.encode([expected, actual], convert_to_tensor=True)
         return float(util.cos_sim(embeddings[0], embeddings[1]))
 
     def _normalize_answer(self, s):
@@ -453,11 +453,11 @@ class Evaluation:
 
             print(
                 f"Q: {question}\n  A: {ground_truth}\n S: {source_type} \n D: {difficulty} \n QT: {question_type} \n")
-            
+
 # Usage
 if __name__ == "__main__":
     # **************** Step1=> Initial Setup: Build the index or add the documents **************** #
-    print(f"********Step2: Initial Setup ********\n")
+    print(f"********Step1: Initial Setup ********\n")
     directory_path = Path("../baseline/data/findoc_xsm_samples")
     doc_path_list = get_doc_paths(directory_path)
     print(f"list of documents:{doc_path_list}\n")
@@ -486,7 +486,7 @@ if __name__ == "__main__":
     evaluation.run_tests(result_path=result_path, test_file_path=testset_path)     #uncomment and run to create a result using the test set
 
     # **************** Use the results to create evaluation report **************** #
-    print(f"********Step2: Using the created result to create evaluation report ********\n")
+    print(f"********Step3: Using the created result to create evaluation report ********\n")
     Evaluation.print_result(f"{result_path}.json")                                # Uncomment to print and see how the result set look, this will be used for evaluation
     matched, unmatched, detailed_results, group_metrics = evaluation.evaluate_model_performance(f"{result_path}.json")
     #evaluation.visualize_results(matched, unmatched)                              #uncomment and run to create a result using the test set
