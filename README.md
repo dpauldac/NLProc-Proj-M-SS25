@@ -44,7 +44,7 @@ pip install -r requirements.txt
 **Step 4**: Environment variable setup to use GROQ api and llama3 model.
   * Create a `.env` file(no filename, just .env) in the root directory of the project (`NLProc-Proj-M-SS25`)
   * Add your GROQ API key to the file like this:
-    * `GROQ_API_KEY=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`
+    * `GROQ_API_KEY=your_groq_api_key`
       > **Note**: The above key is a placeholder. You should [get a new API key from the GROQ Console](https://console.groq.com/keys).
     
 **Step 5**: Run the project
