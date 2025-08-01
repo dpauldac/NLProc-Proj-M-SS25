@@ -660,7 +660,7 @@
         "bert_f1": 0.44
     },
     {
-        "question": "In which geographical segment apple have it's bussiness?  A) Europe, B) Americas C) Africa D) Both A and B?",
+        "question": "In which geographical segment apple have it's business?  A) Europe, B) Americas C) Africa D) Both A and B?",
         "ground_truth": "D) Both A and B",
         "answer_received": "The correct answer is D) Both A and B.\n\nAccording to the context, Apple Inc. manages its business primarily on a geographic basis, and its reportable segments consist of the Americas, Europe, Greater China, Japan, and Rest of Asia Pacific.",
         "source_type": "text",
